@@ -54,17 +54,17 @@ export default function SignInPage() {
           {/* Step 2: Either email code or password */}
           <SignIn.Step name="verifications">
             <SignIn.Strategy name="email_code">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col items-center text-gray-200 gap-4">
                 <h1 className="text-xl font-bold text-center mb-2">Check your email</h1>
-                <p className="text-center text-sm text-gray-600">We sent a code to <SignIn.SafeIdentifier />.</p>
+                <p className="text-center text-sm">We sent a code to <SignIn.SafeIdentifier />.</p>
 
                 <Clerk.Field name="code">
-                  <Clerk.Label>Email code</Clerk.Label>
-                  <Clerk.Input />
+                  <Clerk.Label className="text-gray-300 mr-1">Email code:</Clerk.Label>
+                  <Clerk.Input className="w-full rounded-full text-gray-900" />
                   <Clerk.FieldError className="text-sm text-red-500" />
                 </Clerk.Field>
 
-                <SignIn.Action submit>Continue</SignIn.Action>
+                <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200">Continue</SignIn.Action>
               </div>
             </SignIn.Strategy>
 
@@ -86,25 +86,25 @@ export default function SignInPage() {
             </SignIn.Strategy>
 
             <SignIn.Strategy name="reset_password_email_code">
-              <div className="flex flex-col gap-4">
+              <div className="flex flex-col text-gray-200 items-center gap-4">
                 <h1 className="text-xl font-bold text-center mb-2">Check your email</h1>
-                <p className="text-center text-sm text-gray-600">We sent a code to <SignIn.SafeIdentifier />.</p>
+                <p className="text-center text-sm">We sent a code to <SignIn.SafeIdentifier />.</p>
 
                 <Clerk.Field name="code">
-                  <Clerk.Label>Email code</Clerk.Label>
-                  <Clerk.Input />
+                  <Clerk.Label className="text-gray-300 mr-1">Email code:</Clerk.Label>
+                  <Clerk.Input className="w-full rounded-full text-gray-900" />
                   <Clerk.FieldError className="text-sm text-red-500" />
                 </Clerk.Field>
 
-                <SignIn.Action submit>Continue</SignIn.Action>
+                <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200">Continue</SignIn.Action>
               </div>
             </SignIn.Strategy>
           </SignIn.Step>
 
           {/* Step 3: Forgot password */}
           <SignIn.Step name="forgot-password">
-            <div className="flex flex-col gap-4">
-              <h1 className="text-xl font-bold text-center mb-2">Forgot your password?</h1>
+            <div className="flex flex-col text-gray-200 gap-4">
+              <h1 className="text-xl font-bold text-center mb-1">Forgot your password?</h1>
 
               <SignIn.SupportedStrategy name="reset_password_email_code">
                 Reset password
@@ -117,21 +117,21 @@ export default function SignInPage() {
           {/* Step 4: Reset password */}
           <SignIn.Step name="reset-password">
             <div className="flex flex-col gap-4">
-              <h1 className="text-xl font-bold text-center mb-2">Reset your password</h1>
+              <h1 className="text-xl font-bold text-center text-gray-200 mb-2">Reset your password</h1>
 
               <Clerk.Field name="password">
-                <Clerk.Label>New password</Clerk.Label>
-                <Clerk.Input />
+                <Clerk.Label className="text-gray-300">New password</Clerk.Label>
+                <Clerk.Input className="w-full rounded-full" />
                 <Clerk.FieldError className="text-sm text-red-500" />
               </Clerk.Field>
 
               <Clerk.Field name="confirmPassword">
-                <Clerk.Label>Confirm password</Clerk.Label>
-                <Clerk.Input />
+                <Clerk.Label className="text-gray-300">Confirm password</Clerk.Label>
+                <Clerk.Input className="w-full rounded-full" />
                 <Clerk.FieldError className="text-sm text-red-500" />
               </Clerk.Field>
 
-              <SignIn.Action submit>Reset password</SignIn.Action>
+              <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200 self-start self-center">Reset password</SignIn.Action>
             </div>
           </SignIn.Step>
         </SignIn.Root>
