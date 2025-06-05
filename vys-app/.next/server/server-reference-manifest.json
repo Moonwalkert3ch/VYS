@@ -2,14 +2,6 @@
   "node": {
     "7f9912868de63e3e07ebc8324a34fad4974549798e": {
       "workers": {
-        "app/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        },
-        "app/sign-in/[[...sign-in]]/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        },
         "app/sign-up/[[...sign-up]]/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
@@ -18,29 +10,19 @@
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         },
-        "app/sso-callback/page": {
+        "app/sign-in/[[...sign-in]]/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
-        "app/page": "rsc",
-        "app/sign-in/[[...sign-in]]/page": "rsc",
         "app/sign-up/[[...sign-up]]/page": "rsc",
         "app/_not-found/page": "rsc",
-        "app/sso-callback/page": "rsc"
+        "app/sign-in/[[...sign-in]]/page": "rsc"
       }
     },
     "7fd85aaa274055da521d19c255524f1ddd4036a0d2": {
       "workers": {
-        "app/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        },
-        "app/sign-in/[[...sign-in]]/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        },
         "app/sign-up/[[...sign-up]]/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
@@ -49,29 +31,19 @@
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         },
-        "app/sso-callback/page": {
+        "app/sign-in/[[...sign-in]]/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
-        "app/page": "rsc",
-        "app/sign-in/[[...sign-in]]/page": "rsc",
         "app/sign-up/[[...sign-up]]/page": "rsc",
         "app/_not-found/page": "rsc",
-        "app/sso-callback/page": "rsc"
+        "app/sign-in/[[...sign-in]]/page": "rsc"
       }
     },
     "7fe472917ac57738cbbfd0248a391ce33a1b2d53a3": {
       "workers": {
-        "app/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        },
-        "app/sign-in/[[...sign-in]]/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
-          "async": false
-        },
         "app/sign-up/[[...sign-up]]/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
@@ -80,29 +52,19 @@
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         },
-        "app/sso-callback/page": {
+        "app/sign-in/[[...sign-in]]/page": {
           "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
-        "app/page": "rsc",
-        "app/sign-in/[[...sign-in]]/page": "rsc",
         "app/sign-up/[[...sign-up]]/page": "rsc",
         "app/_not-found/page": "rsc",
-        "app/sso-callback/page": "rsc"
+        "app/sign-in/[[...sign-in]]/page": "rsc"
       }
     },
     "7fc36f530a44ed8d2935cb2796eb7a24a9e201f0ae": {
       "workers": {
-        "app/page": {
-          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227fc36f530a44ed8d2935cb2796eb7a24a9e201f0ae%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
-          "async": false
-        },
-        "app/sign-in/[[...sign-in]]/page": {
-          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227fc36f530a44ed8d2935cb2796eb7a24a9e201f0ae%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
-          "async": false
-        },
         "app/sign-up/[[...sign-up]]/page": {
           "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227fc36f530a44ed8d2935cb2796eb7a24a9e201f0ae%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
           "async": false
@@ -111,17 +73,15 @@
           "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227fc36f530a44ed8d2935cb2796eb7a24a9e201f0ae%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
           "async": false
         },
-        "app/sso-callback/page": {
+        "app/sign-in/[[...sign-in]]/page": {
           "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227fc36f530a44ed8d2935cb2796eb7a24a9e201f0ae%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
           "async": false
         }
       },
       "layer": {
-        "app/page": "action-browser",
-        "app/sign-in/[[...sign-in]]/page": "action-browser",
         "app/sign-up/[[...sign-up]]/page": "action-browser",
         "app/_not-found/page": "action-browser",
-        "app/sso-callback/page": "action-browser"
+        "app/sign-in/[[...sign-in]]/page": "action-browser"
       }
     }
   },
