@@ -32,7 +32,7 @@ export default function Home() {
 
   if (!isSignedIn) {
     return (
-      <main className="flex min-h-screen items-center justify-center bg-blue-500 text-white text-center p-4">
+      <main className="flex min-h-screen items-center justify-center bg text-white text-center p-4">
         <h1 className="text-2xl font-bold">Sign in to view this page</h1>
       </main>
     );
