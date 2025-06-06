@@ -34,7 +34,7 @@ export default function LandingPage() {
       </div>
 
       {/* Problem Section */}
-      <section className="w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start justify-center gap-10 px-4">
+      <section className="w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start justify-center gap-2 px-4">
         <div className="w-full md:w-1/3 flex justify-center">
           <Image
             src="/images/problemhero.png"
@@ -47,8 +47,8 @@ export default function LandingPage() {
 
           {/* Problem Text */}
 
-        <div className="w-full md:w-2/3 animate-fade-in-right text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 border-b-4 border-gray-300 inline-block pb-1">
+        <div className="w-full md:w-2/3 animate-fade-in-right text-center md:text-left text-[#A1C9FF]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 border-b-4 border-blue-200 inline-block pb-1">
             The Problem
           </h2>
           <p className="mt-4 text-base sm:text-lg md:text-xl max-w-2xl mx-auto md:mx-0">
@@ -59,43 +59,43 @@ export default function LandingPage() {
       </section>
 
       {/* Solution Section */}
-      <section className="w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start justify-center gap-10 px-4 py-12">
+      <section className="w-full max-w-6xl flex flex-col md:flex-row items-center md:items-start justify-center gap-2 px-4 py-16">
         <div className="w-full md:w-1/3 flex justify-center">
           <Image
             src="/images/solutionhero.png"
             alt="Solution illustration"
-            width={200}
-            height={200}
+            width={150}
+            height={150}
             className="rounded-lg shadow-lg"
           />
         </div>
 
           {/* Solution Text */}
 
-        <div className="w-full md:w-2/3 animate-fade-in-right text-center md:text-left">
-          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 border-b-4 border-gray-300 inline-block pb-1">
+        <div className="w-full md:w-2/3 animate-fade-in-right text-center md:text-left text-[#A1C9FF]">
+          <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-2 border-b-4 border-blue-200 inline-block pb-1">
             The Solution
           </h2>
-          <p className="mt-4 text-base sm:text-lg md:text-xl max-w-2xl mx-auto md:mx-0">
+          <p className="mt-2 text-base sm:text-lg md:text-xl max-w-2xl mx-auto md:mx-0">
             VYS allows sellers to turn item photos into interactive 3D models with AR viewing and AI-enhanced descriptions, making it easy for buyers to assess condition, scale, and fit with confidence.
           </p>
         </div>
       </section>
 
       {/* Call to Action Section */}
-      <section className="w-full max-w-6xl flex flex-col items-center justify-center text-center py-12">
+      <section className="w-full max-w-6xl flex flex-col items-center justify-center text-center shadow-md shadow-indigo-700 outline-violet-500 py-12">
         <h2 className="text-2xl sm:text-3xl md:text-4xl font-semibold mb-4">
           Ready to Transform Your Secondhand Experience?
         </h2>
         <p className="text-base sm:text-lg md:text-xl mb-6">
           Join the VYS community today and start visualizing your secondhand items like never before! 
         </p>
-        <button className="bg_landing_outline text-[#A1C9FF] px-6 py-3 rounded-lg shadow-lg hover:bg-[#301C47] text-[#A1C9FF] transition-colors">
+        <button className="bg_landing_outline text-[#A1C9FF] px-6 py-3 rounded-lg shadow-lg hover:bg-[#301C47] transition-colors">
           Get Started
         </button>
       </section>
       {/* Footer Section */}
-      <footer className="w-full max-w-6xl text-center py-6">
+      <footer className="w-full max-w-6xl text-center py-6 shadow-lg mt-10">
         <p className="text-sm text-gray-400">
           &copy; {new Date().getFullYear()} VYSMarket. All rights reserved. Powered by NuEwa Tech
         </p>
