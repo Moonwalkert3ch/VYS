@@ -26,16 +26,13 @@
 
 // import Image from "next/image";
 import { useUser } from '@clerk/nextjs';
+import LandingPage from '@/components/LandingPage';
 
 export default function Home() {
   const { isSignedIn, user } = useUser();
 
   if (!isSignedIn) {
-    return (
-      <main className="flex min-h-screen items-center justify-center bg text-white text-center p-4">
-        <h1 className="text-2xl font-bold">Sign in to view this page</h1>
-      </main>
-    );
+    return <LandingPage />;
   }
 
   const emailUsername = user?.emailAddresses?.[0]?.emailAddress.split('@')[0];
