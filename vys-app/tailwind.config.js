@@ -68,6 +68,13 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
+  		},
+		fontFamily: {
+        outfit: ["var(--font-outfit)", "sans-serif"],
+		},
+		width: {
+			'logo': '12rem',
+			'glasses': '12rem',
   		}
   	}
   },

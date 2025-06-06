@@ -8,9 +8,15 @@ import type { Metadata } from "next";
 //   UserButton,
 // } from '@clerk/nextjs'
 import { ClerkProvider } from "@clerk/nextjs";
-import { Geist, Geist_Mono } from "next/font/google";
+import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
+import ClientHeader from "@/components/ClientHeader";
+
+const outfit = Outfit({
+  subsets: ["latin"],
+  variable: "--font-outfit",
+  display: "swap",
+});
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -34,10 +40,8 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
-      <html lang="en">
-        <body
-          className={`${geistSans.variable} ${geistMono.variable} antialiased`}
-        >
+      <html lang="en" className={outfit.variable}>
+        <body className={`${geistSans.variable} ${geistMono.variable} antialiased`}>
           {/* <header className="flex justify-end items-center p-4 gap-4 h-16">
             <SignedOut>
               <SignInButton />
@@ -47,7 +51,7 @@ export default function RootLayout({
               <UserButton />
             </SignedIn>
           </header> */}
-          <Header />
+          <ClientHeader />
           {children}
         </body>
       </html>
