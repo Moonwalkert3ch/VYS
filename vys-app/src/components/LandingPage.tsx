@@ -3,8 +3,8 @@
 import { Canvas } from '@react-three/fiber';
 import { OrbitControls, Stage } from '@react-three/drei';
 import { Suspense } from 'react';
-import dynamic from 'next/dynamic';
-import { GLTFLoader } from 'three/examples/jsm/loaders/GLTFLoader';
+// import dynamic from 'next/dynamic';
+import { GLTFLoader } from 'three-stdlib';
 import { useLoader } from '@react-three/fiber';
 
 // Component to load 3D model
