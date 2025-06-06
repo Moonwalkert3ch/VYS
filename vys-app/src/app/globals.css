@@ -20,7 +20,7 @@
 
 .bg {
   background: var(--gradient-primary);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .bg_reverse {

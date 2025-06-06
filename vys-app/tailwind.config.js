@@ -17,10 +17,15 @@ module.exports = {
   				'20%,50%': {
   					opacity: '0'
   				}
-  			}
+  			},
+			'fade-in-right': {
+			'0%': { opacity: 0, transform: 'translateX(-20px)' },
+			'100%': { opacity: 1, transform: 'translateX(0)' },
+			},
   		},
   		animation: {
-  			'caret-blink': 'caret-blink 1.25s ease-out infinite'
+  			'caret-blink': 'caret-blink 1.25s ease-out infinite',
+			'fade-in-right': 'fade-in-right 0.8s ease-out forwards',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
