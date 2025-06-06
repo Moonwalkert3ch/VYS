@@ -90,14 +90,14 @@ export default function LandingPage() {
         <p className="text-base sm:text-lg md:text-xl mb-6">
           Join the VYS community today and start visualizing your secondhand items like never before! 
         </p>
-        <button className="bg-[#301C47] text-[#A1C9FF] px-6 py-3 rounded-lg shadow-lg hover:bg-[#A1C9FF] text-[#D9D9D9] transition-colors">
+        <button className="bg_landing_outline text-[#A1C9FF] px-6 py-3 rounded-lg shadow-lg hover:bg-[#301C47] text-[#A1C9FF] transition-colors">
           Get Started
         </button>
       </section>
       {/* Footer Section */}
       <footer className="w-full max-w-6xl text-center py-6">
         <p className="text-sm text-gray-400">
-          &copy; {new Date().getFullYear()} VYS. All rights reserved.
+          &copy; {new Date().getFullYear()} VYSMarket. All rights reserved. Powered by NuEwa Tech
         </p>
       </footer>                        
     </main>
