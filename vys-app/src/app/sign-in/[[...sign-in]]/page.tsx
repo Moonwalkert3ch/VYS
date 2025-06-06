@@ -68,6 +68,20 @@ export default function SignInPage() {
                 >
                   <img src="/github-icon.svg" alt="GitHub" className="w-10 h-10 invert" />
                 </Clerk.Connection>
+
+                <Clerk.Connection
+                  name="microsoft"
+                  className="w-[3rem] h-[3rem] bg-gray-800 rounded-md flex items-center justify-center"
+                >
+                  <img src="/microsoft-icon.svg" alt="Microsoft" className="w-10 h-10" />
+                </Clerk.Connection>
+
+                <Clerk.Connection
+                  name="facebook"
+                  className="w-[3rem] h-[3rem] bg-gray-800 rounded-md flex items-center justify-center"
+                >
+                  <img src="/facebook-icon.svg" alt="Facebook" className="w-10 h-10" />
+                </Clerk.Connection>
               </div>
             </div>
             
