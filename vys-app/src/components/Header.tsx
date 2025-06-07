@@ -31,16 +31,22 @@ export function Header() {
       {/* Right side */}
       <div className="flex items-center gap-4 text-sm sm:text-base">
         {isSignedIn ? (
-          <>
-            {/* Cart Icon */}
-            <Link href="/cart" className="text-white hover:text-[#A1C9FF]">
-              <ShoppingCart className="h-6 w-6" />
-            </Link>
-            {/* User Button */}
-            <UserButton afterSignOutUrl="/" />
-                  <h6 className="text-xs text-white font-bold">Welcome, {user?.firstName || emailUsername}!</h6>
+          <div className="flex flex-col items-end space-y-1">
+            {/* Top row: Cart + User Button */}
+            <div className="flex items-center gap-4">
+              {/* Cart Icon */}
+              <Link href="/cart" className="text-white hover:text-[#A1C9FF]">
+                <ShoppingCart className="h-6 w-6" />
+              </Link>
+              {/* User Button */}
+              <UserButton afterSignOutUrl="/" />
+            </div>
 
-          </>
+            {/* Greeting below */}
+            <h6 className="text-xs text-white font-bold">
+              Welcome, {user?.firstName || emailUsername}!
+            </h6>
+          </div>
         ) : (
           <>
             <SignInButton>
@@ -55,6 +61,7 @@ export function Header() {
             </SignUpButton>
           </>
         )}
+
       </div>
     </header>
   );
