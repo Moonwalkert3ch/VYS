@@ -43,7 +43,7 @@ export function Header() {
             </div>
 
             {/* Greeting below */}
-            <h6 className="text-xs text-white font-bold">
+            <h6 className="text-xs text-[#A1C9FF]  font-bold">
               Welcome, {user?.firstName || emailUsername}!
             </h6>
           </div>
