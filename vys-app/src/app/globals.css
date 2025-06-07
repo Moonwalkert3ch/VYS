@@ -20,7 +20,7 @@
 
 .bg {
   background: var(--gradient-primary);
-  height: 100vh;
+  min-height: 100vh;
 }
 
 .bg_reverse {
@@ -34,7 +34,7 @@
 
 .bg_landing_outline {
   background: var(--color-background-landing);
-  outline: 1px solid var(--color-outline-landing);
+  outline: 1px solid var(--color-navigation);
 }
 
 .landing_navigation {
