@@ -40,7 +40,7 @@ export default function Home() {
   return (
     <main className="flex min-h-screen items-center justify-center bg-blue-500 text-white flex-col text-center p-4">
       <h1 className="text-4xl font-bold">Welcome, {user?.firstName || emailUsername}!</h1>
-      <h2 className="text-2xl mt-2">VYS Prototype</h2>
+      {/* <h2 className="text-2xl mt-2">VYS Prototype</h2> */}
     </main>
   );
 }

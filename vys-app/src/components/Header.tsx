@@ -6,12 +6,15 @@ import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
 import { ShoppingCart } from "lucide-react"; // Or any other icon lib you're using
 
 export function Header() {
-  const { isSignedIn } = useUser();
+  const { isSignedIn, user } = useUser();
+
+  const emailUsername = user?.emailAddresses?.[0]?.emailAddress.split('@')[0];
+
 
   return (
     <header
       className={`flex justify-between items-center px-4 py-2 h-16 w-full ${
-        isSignedIn ? "bg-[#052958]" : "bg_landing_outline"
+        isSignedIn ? "bg-[#052958] outline outline-4 outline-[#6C0611]" : "bg_landing_outline"
       }`}
     >
       {/* Logo on the left */}
@@ -35,6 +38,8 @@ export function Header() {
             </Link>
             {/* User Button */}
             <UserButton afterSignOutUrl="/" />
+                  <h6 className="text-xs text-white font-bold">Welcome, {user?.firstName || emailUsername}!</h6>
+
           </>
         ) : (
           <>
