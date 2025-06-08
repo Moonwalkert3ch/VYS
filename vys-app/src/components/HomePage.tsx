@@ -2,9 +2,13 @@
 
 import { Home, User, Search, Bell, Store, Plus } from 'lucide-react';
 import { useState } from 'react';
+import { useRouter } from 'next/navigation';
+
 
 export default function HomePage() {
   const [isFabOpen, setIsFabOpen] = useState(false);
+  const router = useRouter();
+  // Function to handle the floating action button click
 
   return (
     <>
@@ -40,15 +44,19 @@ export default function HomePage() {
         <div
           className={`flex items-center transition-all duration-300 ease-in-out ${
             isFabOpen ? 'w-32' : 'w-12'
-          } bg-[#052958] hover:bg-[#45132F] text-[#A1C9FF] rounded-full px-3 py-2 cursor-pointer shadow-lg`}
-          onClick={() => setIsFabOpen((prev) => !prev)}
+          } bg-[#052958] hover:bg-[#063f8f] text-[#A1C9FF] rounded-full px-3 py-2 cursor-pointer shadow-lg`}
+          onClick={() => {
+            if (isFabOpen) {
+              router.push('/create-listing');
+            } else {
+              setIsFabOpen(true);
+            }
+          }}
           onTouchStart={() => setIsFabOpen(true)}
           onMouseLeave={() => setIsFabOpen(false)}
         >
           <Plus className="h-5 w-5" />
-          {isFabOpen && (
-            <span className="ml-2 whitespace-nowrap text-sm cursor-pointer">Create</span>
-          )}
+          {isFabOpen && <span className="ml-2 whitespace-nowrap text-sm">Create</span>}
         </div>
       </div>
 
