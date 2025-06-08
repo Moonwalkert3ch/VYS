@@ -1,48 +1,92 @@
+'use client';
 
+import { Home, User, Search, Bell, Store, Plus } from 'lucide-react';
+import { useState } from 'react';
 
 export default function HomePage() {
-  return (
-    <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col items-center text-center p-4">
-     
-        {/* Search Bar Row */}
-        <div className="w-full max-w-screen-md flex flex-row items-center gap-4 mt-4 px-4">
-            {/* Main Search Box */}
-            <div className="flex items-center bg-white text-gray-500 rounded-full px-4 py-2 flex-grow">
-            <svg
-                xmlns="http://www.w3.org/2000/svg"
-                className="h-5 w-5 text-gray-400 mr-2"
-                fill="none"
-                viewBox="0 0 24 24"
-                stroke="currentColor"
-            >
-                <path
-                strokeLinecap="round"
-                strokeLinejoin="round"
-                strokeWidth={2}
-                d="M21 21l-4.35-4.35m0 0A7.5 7.5 0 1010.5 18.5a7.5 7.5 0 006.15-3.85z"
-                />
-            </svg>
-            <input
-                type="text"
-                placeholder="What are you searching for?"
-                className="w-full bg-transparent focus:outline-none text-gray-800 placeholder-gray-400"
-            />
-            </div>
+  const [isFabOpen, setIsFabOpen] = useState(false);
 
-            {/* Zip Code + Go */}
-            <div className="flex items-center gap-2">
+  return (
+    <>
+      <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col items-center text-center p-4 pb-32">
+        {/* Search Bar Row */}
+        <div className="w-full max-w-screen-lg flex flex-row sm:flex-row items-center gap-4 mt-4 px-4">
+          {/* Main Search Box */}
+          <div className="flex items-center bg-white text-gray-500 rounded-full px-4 py-2 w-full sm:flex-1">
+            <Search className="h-5 w-5 text-gray-400 mr-2" />
             <input
-                type="text"
-                placeholder="Enter zip code"
-                className="rounded-md px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none w-24"
+              type="text"
+              placeholder="What are you searching for?"
+              className="w-full bg-transparent focus:outline-none text-gray-800 placeholder-gray-400"
+            />
+          </div>
+
+          {/* Zip Code + Go */}
+          <div className="flex items-center gap-2 w-full sm:w-auto">
+            <input
+              type="text"
+              placeholder="Enter zip code"
+              className="rounded-md px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none w-full sm:w-28"
             />
             <button className="bg-[#A1C9FF] text-indigo-950 font-semibold px-4 py-2 rounded-md hover:bg-[#45132F] hover:text-[#A1C9FF] transition">
-                Go
+              Go
             </button>
-            </div>
+          </div>
         </div>
-    
+      </main>
 
-    </main>
+      {/* Floating Action Button (FAB) */}
+      <div className="fixed bottom-24 right-4 z-50">
+        <div
+          className={`flex items-center transition-all duration-300 ease-in-out ${
+            isFabOpen ? 'w-32' : 'w-12'
+          } bg-[#052958] hover:bg-[#45132F] text-[#A1C9FF] rounded-full px-3 py-2 cursor-pointer shadow-lg`}
+          onClick={() => setIsFabOpen((prev) => !prev)}
+          onTouchStart={() => setIsFabOpen(true)}
+          onMouseLeave={() => setIsFabOpen(false)}
+        >
+          <Plus className="h-5 w-5" />
+          {isFabOpen && (
+            <span className="ml-2 whitespace-nowrap text-sm cursor-pointer">Create</span>
+          )}
+        </div>
+      </div>
+
+      {/* Bottom Navigation Bar */}
+      <nav className="fixed bottom-0 left-0 w-full bg-[#052958] text-[#A1C9FF] border-t border-[#A1C9FF] z-40">
+        <ul className="flex justify-around items-center py-3 max-w-screen-md mx-auto">
+          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
+            <Home className="h-5 w-5 mb-1" />
+            Home
+          </li>
+          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
+            <User className="h-5 w-5 mb-1" />
+            Profile
+          </li>
+          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
+            <Search className="h-5 w-5 mb-1" />
+            Search
+          </li>
+          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
+            <Bell className="h-5 w-5 mb-1" />
+            Notifications
+          </li>
+          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
+            <Store className="h-5 w-5 mb-1" />
+            My VYS
+          </li>
+        </ul>
+      </nav>
+    </>
   );
 }
+
+
+// This component represents the home page of the VYS app, featuring a search bar and a bottom navigation bar with icons for Home, Profile, Search, Notifications, and My VYS. The layout is designed to be responsive and user-friendly, with a focus on accessibility and ease of use.
+// The search bar allows users to search for items, while the zip code input and "Go" button enable location-based searches. The bottom navigation bar provides quick access to key features of the app, enhancing user experience and engagement.
+// The design incorporates a modern aesthetic with a color scheme that aligns with the VYS brand, ensuring a cohesive look and feel throughout the application. The use of icons enhances visual clarity and usability, making it easy for users to navigate the app.
+// The component is built using React and Tailwind CSS, leveraging utility classes for styling and layout. It is designed to be easily extendable, allowing for future enhancements and additional features as needed.
+// The HomePage component is a functional React component that serves as the main entry point for authenticated users in the VYS app. It includes a search bar for item searches and a bottom navigation bar with icons for easy access to key features.
+// The component is styled using Tailwind CSS, ensuring a responsive and visually appealing design. It is designed to be user-friendly, with a focus on accessibility and ease of navigation.
+// The HomePage component is part of a larger application that utilizes Clerk for user authentication, ensuring that only signed-in users can access the home page. This enhances security and provides a personalized experience for each user.
+// The component is structured to be easily maintainable and extendable, allowing for future enhancements and additional features as needed. It serves as a foundational part of the VYS app, providing a seamless user experience from the moment users log in.
