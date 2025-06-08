@@ -1,8 +1,9 @@
 'use client';
 
-import { ArrowLeft, Plus, Camera, Home, User, Search, Bell, Store } from 'lucide-react';
+import { ArrowLeft, Plus, Camera } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
+import BottomNavBar from '@/components/BottomNavBar';
 
 export default function CreateListing() {
   const router = useRouter();
@@ -29,9 +30,9 @@ export default function CreateListing() {
         {/* Form */}
         <div className="w-full max-w-md mt-6 space-y-4">
           <div className="flex items-center gap-3">
-            <button className="bg-white p-3 rounded-lg">
+            {/* <button className="bg-white p-3 rounded-lg">
               <Plus className="h-6 w-6 text-indigo-950" />
-            </button>
+            </button> */}
             <input
               type="text"
               value={itemName}
@@ -59,30 +60,7 @@ export default function CreateListing() {
       </main>
 
       {/* Bottom Navigation Bar */}
-      <nav className="fixed bottom-0 left-0 w-full bg-[#052958] text-[#A1C9FF] border-t border-[#A1C9FF] z-40">
-        <ul className="flex justify-around items-center py-3 max-w-screen-md mx-auto">
-          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
-            <Home className="h-5 w-5 mb-1" />
-            Home
-          </li>
-          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
-            <User className="h-5 w-5 mb-1" />
-            Profile
-          </li>
-          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
-            <Search className="h-5 w-5 mb-1" />
-            Search
-          </li>
-          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
-            <Bell className="h-5 w-5 mb-1" />
-            Notifications
-          </li>
-          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
-            <Store className="h-5 w-5 mb-1" />
-            My VYS
-          </li>
-        </ul>
-      </nav>
+      <BottomNavBar />
     </>
   );
 }
