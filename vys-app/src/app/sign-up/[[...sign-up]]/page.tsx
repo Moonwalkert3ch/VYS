@@ -27,7 +27,7 @@ export default function SignUpPage() {
 
 
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-[#002D69] to-[#7C0003]">
       <div className="sign-up-card-head p-4 rounded-xl shadow-xl w-full max-w-md">       
         <SignUp.Root>
           <SignUp.Step name="start">

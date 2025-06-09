@@ -19,7 +19,7 @@ import * as SignIn from '@clerk/elements/sign-in';
 
 export default function SignInPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-[#7C0003] to-[#002D69]">
       <div className="sign-in-card-head p-6 rounded-xl shadow-xl w-full max-w-md">
         
         <SignIn.Root>
