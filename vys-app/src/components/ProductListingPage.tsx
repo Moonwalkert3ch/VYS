@@ -61,7 +61,7 @@ export default function ProductListingPage() {
 
                 <h3 className="text-2xl font-bold text-center mt-4">Price</h3>
 
-                <div className="bg-white text-black p-4 rounded-lg max-h-48 overflow-y-auto text-sm">
+                <div className="bg-white w-32 text-black p-4 rounded-lg max-h-48 overflow-y-auto text-sm">
                 <p>
                     Price: $100.00
                 </p>
@@ -83,7 +83,7 @@ export default function ProductListingPage() {
                             type="submit"
                             className="bg-[#052958] hover:bg-indigo-950 text-[#A1C9FF] outline font-semibold py-2 px-6 rounded-full transition duration-200"
                         >
-                            Save
+                            Approve
                         </button>
                     </Link>
                 </div>
