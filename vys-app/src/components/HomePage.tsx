@@ -33,7 +33,7 @@ export default function HomePage() {
               placeholder="Enter zip code"
               className="rounded-md px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none w-full sm:w-28"
             />
-            <button className="bg-[#A1C9FF] text-indigo-950 font-semibold px-4 py-2 rounded-md hover:bg-[#45132F] hover:text-[#A1C9FF] transition">
+            <button className="bg-[#052958] text-[#A1C9FF] font-semibold px-4 py-2 rounded-md hover:bg-[#45132F] transition">
               Go
             </button>
           </div>
@@ -45,7 +45,7 @@ export default function HomePage() {
         <div
           className={`flex items-center transition-all duration-300 ease-in-out ${
             isFabOpen ? 'w-32' : 'w-12'
-          } bg-[#052958] hover:bg-[#063f8f] text-[#A1C9FF] rounded-full px-3 py-2 cursor-pointer shadow-lg`}
+          } bg-[#052958] hover:bg-[#45132F] text-[#A1C9FF] rounded-full px-3 py-2 cursor-pointer shadow-lg`}
           onClick={() => {
             if (isFabOpen) {
               router.push('/create-listing');
