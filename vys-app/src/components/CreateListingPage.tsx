@@ -1,7 +1,7 @@
 // app/create-listing/page.tsx
 'use client';
 
-import { ArrowLeft, Camera } from 'lucide-react';
+import { ArrowLeft, Camera, Sparkles } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import BottomNavBar from '@/components/BottomNavBar';
@@ -10,7 +10,9 @@ import Link from 'next/link';
 export default function CreateListingPage() {
   const router = useRouter();
   const [itemName, setItemName] = useState('');
+  const [price, setPrice] = useState('');
   const [itemDescription, setItemDescription] = useState('');
+  const [isDescriptionFocused, setIsDescriptionFocused] = useState(false);
 
   return (
     <>
@@ -36,35 +38,64 @@ export default function CreateListingPage() {
 
 
         {/* Form */}
-        <div className="w-full max-w-md mt-6 space-y-4">
-          <div className="flex items-center gap-3">
-            {/* <button className="bg-white p-3 rounded-lg">
-              <Plus className="h-6 w-6 text-indigo-950" />
-            </button> */}
-            <input
-              type="text"
-              value={itemName}
-              onChange={(e) => setItemName(e.target.value)}
-              placeholder="Item Name..."
-              className="flex-grow px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none"
-            />
-            <button className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md">
-              Generate Name
-            </button>
-          </div>
+      <form className="w-full max-w-md space-y-4 mt-6">
+        {/* Price */}
+        <input
+          type="number"
+          value={price}
+          onChange={(e) => setPrice(e.target.value)}
+          placeholder="Enter price"
+          className="w-36 px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none"
+        />
 
-          <div className="flex items-start gap-3">
-            <textarea
-              value={itemDescription}
-              onChange={(e) => setItemDescription(e.target.value)}
-              placeholder="Item Description..."
-              className="flex-grow px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none h-28 resize-none"
-            />
-            <button className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md h-fit mt-2">
-              Generate Description
+        {/* Item Name with AI Generate */}
+        <div className="flex items-center gap-3">
+          <input
+            type="text"
+            value={itemName}
+            onChange={(e) => setItemName(e.target.value)}
+            placeholder="Enter item name"
+            className="w-48 px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none"
+          />
+          <button
+            type="button"
+            className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-1"
+          >
+            <Sparkles className="h-4 w-4" />
+            Generate Name
+          </button>
+        </div>
+
+        {/* Item Description with AI Generate */}
+        <div className="flex items-start gap-3">
+          <textarea
+            value={itemDescription}
+            onChange={(e) => setItemDescription(e.target.value)}
+            onFocus={() => setIsDescriptionFocused(true)}
+            onBlur={() => setIsDescriptionFocused(false)}
+            placeholder="Enter item description"
+            className={`flex-grow px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none resize-none transition-all duration-300 ${
+              isDescriptionFocused ? 'h-[50vh]' : 'h-28'
+            }`}
+          />
+          <button
+            type="button"
+            className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md h-fit mt-2 flex items-center gap-1"
+          >
+            <Sparkles className="h-4 w-4" />
+            Generate Description
+          </button>
+          </div>
+           {/* Save Changes Button */}
+          <div className="flex justify-center pt-4">
+            <button
+              type="submit"
+              className="bg-[#052958] hover:bg-indigo-950 text-[#A1C9FF] outline font-semibold py-2 px-6 rounded-full transition duration-200"
+            >
+              Save
             </button>
           </div>
-        </div>
+        </form>
       </main>
 
       {/* Bottom Navigation Bar */}

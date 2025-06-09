@@ -22,10 +22,12 @@ export default function ThreeDModelPage() {
             <div className="mt-10 flex justify-center gap-10 w-full">
                 {/* Accept */}
                 <div className="flex flex-col items-center">
-                <button className="bg-green-600 hover:bg-[#45132F] p-3 rounded-full">
-                    <CheckCircle className="h-6 w-6 text-[#A1C9FF]" />
-                </button>
-                <span className="text-sm mt-1">Accept</span>
+                    <Link href="/edit-listing" className="flex flex-col items-center">
+                    <button className="bg-green-600 hover:bg-[#45132F] p-3 rounded-full">
+                        <CheckCircle className="h-6 w-6 text-[#A1C9FF]" />
+                    </button>
+                    <span className="text-sm mt-1">Accept</span>
+                </Link>
                 </div>
 
                 {/* Retry */}

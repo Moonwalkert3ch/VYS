@@ -43,7 +43,7 @@ export default function UploadImagePage() {
         {/* Submit Button */}
         <div className="mt-10 flex justify-center w-full">
           <Link href="/3d-model">
-          <button className="bg-[#052958] hover:bg-indigo-900 text-[#A1C9FF] font-semibold py-2 px-6 rounded-full transition duration-200 w-40">
+          <button className="bg-[#052958] hover:bg-indigo-900 text-[#A1C9FF] outline font-semibold py-2 px-6 rounded-full transition duration-200 w-40">
             Submit
           </button>
           </Link>
@@ -54,3 +54,5 @@ export default function UploadImagePage() {
     </>
   );
 }
+
+// Compare this snippet from vys-app/src/components/3DModelPage.tsx:
