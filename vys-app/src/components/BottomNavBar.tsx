@@ -5,7 +5,7 @@ import Link from 'next/link';
 
 export default function BottomNavBar() {
   return (
-    <nav className="fixed bottom-0 left-0 w-full bg-[#052958] text-[#A1C9FF] border-t border-[#A1C9FF] z-40">
+    <nav className="fixed bottom-0 left-0 w-full bg-[#052958] text-[#A1C9FF] border-t border-[#6C0611] z-40">
       <ul className="flex justify-around items-center py-3 max-w-screen-md mx-auto">
         <Link href="/">
           <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">

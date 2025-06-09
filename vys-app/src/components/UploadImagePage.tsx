@@ -2,47 +2,54 @@
 
 import { Camera, Plus, ArrowLeft } from 'lucide-react';
 import BottomNavBar from './BottomNavBar';
-// import Link from 'next/link';
 import { useRouter } from 'next/navigation';
+import Link from 'next/link';
 
 export default function UploadImagePage() {
   const router = useRouter();
 
   return (
     <>
-      <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col items-center p-4 pb-32">
-        <div className="w-full max-w-screen-lg flex flex-col gap-6 mt-6 px-4">
-          {/* Header with Arrow + Title */}
-          <div className="flex items-center gap-4">
-            <button onClick={() => router.push('/home')}>
-              <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />
-            </button>
-            <h1 className="text-2xl font-bold">Upload Images</h1>
+      <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col p-4 pb-32 items-center">
+        {/* Header */}
+        <div className="relative w-full max-w-screen-md flex items-center justify-center h-12 mt-4 mb-6">
+          {/* Left Arrow */}
+          <button
+            onClick={() => router.push('/home')}
+            className="absolute left-0"
+          >
+            <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />
+          </button>
+
+          {/* Centered Title */}
+          <h1 className="text-2xl font-bold text-center">Upload Images</h1>
+        </div>
+
+        {/* Image Upload Grid */}
+        <div className="grid grid-cols-3 gap-4 w-full max-w-md justify-center">
+          {/* First Image Slot with Camera Icon */}
+          <div className="bg-gray-300 aspect-square flex items-center justify-center rounded-md">
+            <Camera className="h-8 w-8 text-black" />
           </div>
 
-          {/* Image Upload Grid */}
-          <div className="grid grid-cols-3 gap-4 w-full max-w-md">
-            {/* First Image Slot with Camera Icon */}
-            <div className="bg-gray-300 aspect-square flex items-center justify-center rounded-md">
-              <Camera className="h-8 w-8 text-black" />
+          {/* 5 More Slots with Plus Icons */}
+          {[...Array(5)].map((_, i) => (
+            <div key={i} className="bg-gray-300 aspect-square flex items-center justify-center rounded-md">
+              <Plus className="h-6 w-6 text-black" />
             </div>
+          ))}
+        </div>
 
-            {/* 5 More Slots with Plus Icons */}
-            {[...Array(5)].map((_, i) => (
-              <div key={i} className="bg-gray-300 aspect-square flex items-center justify-center rounded-md">
-                <Plus className="h-6 w-6 text-black" />
-              </div>
-            ))}
-          </div>
-
-          {/* Submit Button */}
-          <button className="mt-8 bg-[#052958] hover:bg-indigo-950 text-[#A1C9FF] font-semibold py-2 px-6 rounded-full transition duration-200">
+        {/* Submit Button */}
+        <div className="mt-10 flex justify-center w-full">
+          <Link href="/3d-model">
+          <button className="bg-[#052958] hover:bg-indigo-900 text-[#A1C9FF] font-semibold py-2 px-6 rounded-full transition duration-200 w-40">
             Submit
           </button>
+          </Link>
         </div>
       </main>
 
-      {/* Bottom Navigation Bar */}
       <BottomNavBar />
     </>
   );
