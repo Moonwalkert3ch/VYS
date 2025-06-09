@@ -131,7 +131,7 @@ export default function SignInPage() {
                 <Clerk.FieldError className="text-sm text-red-500" />
               </Clerk.Field>
 
-              <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200 self-start self-center">Reset password</SignIn.Action>
+              <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200 self-center">Reset password</SignIn.Action>
             </div>
           </SignIn.Step>
         </SignIn.Root>

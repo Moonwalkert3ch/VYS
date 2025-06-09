@@ -5,6 +5,7 @@ import { ArrowLeft, Camera } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import { useState } from 'react';
 import BottomNavBar from '@/components/BottomNavBar';
+import Link from 'next/link';
 
 export default function CreateListingPage() {
   const router = useRouter();
@@ -16,17 +17,23 @@ export default function CreateListingPage() {
       <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col items-center px-4 pb-32">
         {/* Header */}
         <div className="w-full flex items-center justify-between py-4 max-w-screen-md">
-          <button onClick={() => router.back()}>
-            <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />
-          </button>
+          <Link href="/home" className="text-[#A1C9FF]">
+            <button onClick={() => router.push('/home')}>
+              <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />
+            </button>
+          </Link>
           <h1 className="text-lg sm:text-xl font-bold text-center flex-1 -ml-6">CREATE LISTING</h1>
         </div>
 
+        {/* Image Capture Section */}
         {/* Capture Images */}
-        <div className="bg-gray-300 w-full aspect-square max-w-md flex flex-col items-center justify-center rounded-md">
-          <Camera className="h-10 w-10 text-black mb-2" />
-          <span className="text-black font-medium">Capture Images</span>
-        </div>
+        <Link href="/upload-image" className="block w-full max-w-md">
+          <div className="cursor-pointer bg-gray-300 w-full aspect-square max-w-md flex flex-col items-center justify-center rounded-md transition hover:brightness-95">
+            <Camera className="h-10 w-10 text-black mb-2" />
+            <span className="text-black font-medium">Capture Images</span>
+          </div>
+        </Link>
+
 
         {/* Form */}
         <div className="w-full max-w-md mt-6 space-y-4">
