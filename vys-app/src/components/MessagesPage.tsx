@@ -20,6 +20,46 @@ export default function MessagesPage() {
                     <p className="font-medium">John Smith</p>
                     <p className="text-xs text-gray-500 truncate">Another recent message...</p>
                 </li>
+                <li className="p-3 rounded-lg bg-gray-100 cursor-pointer hover:bg-gray-200 transition">
+                    <p className="font-medium">Dallas Carter</p>
+                    <p className="text-xs text-gray-500 truncate">Last message preview here...</p>
+                </li>
+                <li className="p-3 rounded-lg bg-gray-100 cursor-pointer hover:bg-gray-200 transition">
+                    <p className="font-medium">Dillon Biggs</p>
+                    <p className="text-xs text-gray-500 truncate">Last message preview here...</p>
+                </li>
+                <li className="p-3 rounded-lg bg-gray-100 cursor-pointer hover:bg-gray-200 transition">
+                    <p className="font-medium">Zachary Kosher</p>
+                    <p className="text-xs text-gray-500 truncate">Last message preview here...</p>
+                </li>
+                <li className="p-3 rounded-lg bg-gray-100 cursor-pointer hover:bg-gray-200 transition">
+                    <p className="font-medium">Ahsahd Muller</p>
+                    <p className="text-xs text-gray-500 truncate">Last message preview here...</p>
+                </li>
+                <li className="p-3 rounded-lg bg-gray-100 cursor-pointer hover:bg-gray-200 transition">
+                    <p className="font-medium">Isaiah Ross</p>
+                    <p className="text-xs text-gray-500 truncate">Last message preview here...</p>
+                </li>
+                <li className="p-3 rounded-lg bg-gray-100 cursor-pointer hover:bg-gray-200 transition">
+                    <p className="font-medium">Christopher Robinson</p>
+                    <p className="text-xs text-gray-500 truncate">Last message preview here...</p>
+                </li>
+                <li className="p-3 rounded-lg bg-gray-100 cursor-pointer hover:bg-gray-200 transition">
+                    <p className="font-medium">Eilane Moss</p>
+                    <p className="text-xs text-gray-500 truncate">Last message preview here...</p>
+                </li>
+                <li className="p-3 rounded-lg bg-gray-100 cursor-pointer hover:bg-gray-200 transition">
+                    <p className="font-medium">Anazalea Martin</p>
+                    <p className="text-xs text-gray-500 truncate">Last message preview here...</p>
+                </li>
+                <li className="p-3 rounded-lg bg-gray-100 cursor-pointer hover:bg-gray-200 transition">
+                    <p className="font-medium">Justin Case</p>
+                    <p className="text-xs text-gray-500 truncate">Last message preview here...</p>
+                </li>
+                <li className="p-3 rounded-lg bg-gray-100 cursor-pointer hover:bg-gray-200 transition">
+                    <p className="font-medium">Demi Porter</p>
+                    <p className="text-xs text-gray-500 truncate">Last message preview here...</p>
+                </li>
                 </ul>
             </aside>
 
@@ -38,6 +78,21 @@ export default function MessagesPage() {
                 </div>
                 <div className="self-end bg-blue-500 text-white rounded-lg px-4 py-2 max-w-sm">
                     <p>Sure, go ahead!</p>
+                </div>
+                <div className="self-start bg-gray-200 rounded-lg px-4 py-2 max-w-sm">
+                    <p>Great! Are you located in East Tulsa?</p>
+                </div>
+                <div className="self-end bg-blue-500 text-white rounded-lg px-4 py-2 max-w-sm">
+                    <p>No, I am in Coweta.</p>
+                </div>
+                <div className="self-start bg-gray-200 rounded-lg px-4 py-2 max-w-sm">
+                    <p>I love the couch! I want to meet up.</p>
+                </div>
+                <div className="self-end bg-blue-500 text-white rounded-lg px-4 py-2 max-w-sm">
+                    <p>I'm glad to hear. What day can you pick it up?</p>
+                </div>
+                <div className="self-start bg-gray-200 rounded-lg px-4 py-2 max-w-sm">
+                    <p>Tuesday, 6/11/25 @ 6:30 P.M.</p>
                 </div>
                 </div>
 
