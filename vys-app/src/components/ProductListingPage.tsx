@@ -20,12 +20,12 @@ export default function ProductListingPage() {
         <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col items-center p-4 pb-32">
             {/* Header */}
             <div className="w-full flex items-center justify-between py-4 max-w-screen-md">
-            <Link href="/home" className="text-[#A1C9FF]">
-                <button onClick={() => router.push('/create-listing')}>
-                <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />
+            <Link href="/edit-listing cursor-pointer">
+                <button onClick={() => router.back()}>
+                    <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />
                 </button>
             </Link>
-            <h1 className="text-lg sm:text-xl font-bold text-center flex-1 -ml-6">PRODUCT LISTING</h1>
+            <h1 className="text-2xl font-bold text-center flex-1 -ml-6">PRODUCT LISTING</h1>
             </div>
 
             <div className="w-full max-w-screen-md space-y-6">
@@ -50,7 +50,7 @@ export default function ProductListingPage() {
                 </div>
 
                 {/* Product Name */}
-                <h2 className="text-2xl font-bold text-center mt-4">Product Name</h2>
+                <h2 className="text-lg sm:text-xl font-bold mt-4">Product Name</h2>
 
                 {/* Scrollable Description */}
                 <div className="bg-white text-black p-4 rounded-lg max-h-48 overflow-y-auto text-sm">
@@ -59,11 +59,11 @@ export default function ProductListingPage() {
                 </p>
                 </div>
 
-                <h3 className="text-2xl font-bold text-center mt-4">Price</h3>
+                <h3 className="text-lg sm:text-xl font-bold mt-4">Price</h3>
 
                 <div className="bg-white w-32 text-black p-4 rounded-lg max-h-48 overflow-y-auto text-sm">
                 <p>
-                    Price: $100.00
+                    $100.00
                 </p>
                 </div>
 
@@ -75,18 +75,7 @@ export default function ProductListingPage() {
                 >
                     <Image src={selectedImage} alt="Selected" className="max-w-full max-h-full rounded-lg" />
                 </div>
-                )}
-                 {/* Save Changes Button */}
-                <div className="flex justify-center pt-4">
-                    <Link href="/product-listings">
-                        <button
-                            type="submit"
-                            className="bg-[#052958] hover:bg-indigo-950 text-[#A1C9FF] outline font-semibold py-2 px-6 rounded-full transition duration-200"
-                        >
-                            Approve
-                        </button>
-                    </Link>
-                </div>
+                )}           
             </div>
         </main>
 

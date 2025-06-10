@@ -13,7 +13,13 @@ export default function HomePage() {
 
   return (
     <>
-      <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col items-center text-center p-4 pb-32">
+      <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col p-4 pb-32">
+         {/* Page Header */}
+        <header className="w-full max-w-screen-lg mt-4 mb-6">
+            <h1 className="text-2xl sm:text-3xl font-bold text-center text-[#A1C9FF]">
+                HOME
+            </h1>
+          </header>
         {/* Search Bar Row */}
         <div className="w-full max-w-screen-lg flex flex-row sm:flex-row items-center gap-4 mt-4 px-4">
           {/* Main Search Box */}
@@ -38,7 +44,26 @@ export default function HomePage() {
             </button>
           </div>
         </div>
-      </main>
+      
+       
+
+      {/* Listings Section */}
+        <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF] mt-8">
+                Listings
+        </h2>
+            <section className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+                {/* Placeholder for Listings */}
+                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((listing) => (
+                    <div
+                        key={listing}
+                        className="bg-gray-300 p-4 rounded-md text-indigo-950 hover:bg-[#A1C9FF] hover:text-indigo-950 transition-colors cursor-pointer"
+                    >
+                        <h2 className="text-lg font-semibold">Listing {listing}</h2>
+                        <p className="text-sm mt-2">Description of listing {listing}.</p>
+                    </div>
+                ))}
+            </section>
+          </main>
 
       {/* Floating Action Button (FAB) */}
       <div className="fixed bottom-24 right-4 z-50">

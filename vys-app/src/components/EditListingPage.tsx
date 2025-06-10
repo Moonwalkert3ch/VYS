@@ -65,25 +65,26 @@ export default function EditListingPage() {
                 </div>
 
                 {/* Item Description with AI Generate */}
-                <div className="flex items-start gap-3">
+                <div className="relative w-full max-w-4xl">
                     <textarea
                         value={itemDescription}
                         onChange={(e) => setItemDescription(e.target.value)}
                         onFocus={() => setIsDescriptionFocused(true)}
                         onBlur={() => setIsDescriptionFocused(false)}
                         placeholder="Enter item description"
-                        className={`flex-grow px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none resize-none transition-all duration-300 ${
+                        className={`w-full px-4 py-3 pr-28 rounded-md text-black placeholder-gray-400 focus:outline-none resize-none transition-all duration-300 ${
                         isDescriptionFocused ? 'h-[50vh]' : 'h-28'
                         }`}
                     />
                     <button
                         type="button"
-                        className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md h-fit mt-2 flex items-center gap-1"
+                        className="absolute top-2 right-2 bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-1 shadow"
                     >
                         <Sparkles className="h-4 w-4" />
                         Generate Description
                     </button>
                 </div>
+
 
                 {/* Save Changes Button */}
                 <div className="flex justify-center pt-4">
