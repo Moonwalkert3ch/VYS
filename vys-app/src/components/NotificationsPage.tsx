@@ -54,7 +54,7 @@ export default function NotificationsPage() {
             <li
               key={notification.id}
               className={`flex items-start gap-4 p-4 rounded-md border transition ${
-                notification.read ? 'bg-white' : 'bg-blue-50 border-blue-300'
+                notification.read ? 'bg-white hover:bg-[#A1C9FF]' : 'bg-blue-50 border-blue-300 hover:bg-[#A1C9FF]'
               }`}
             >
               <div className="mt-1">
