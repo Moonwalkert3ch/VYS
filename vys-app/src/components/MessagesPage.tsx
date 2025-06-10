@@ -89,7 +89,7 @@ export default function MessagesPage() {
                     <p>I love the couch! I want to meet up.</p>
                 </div>
                 <div className="self-end bg-blue-500 text-white rounded-lg px-4 py-2 max-w-sm">
-                    <p>I'm glad to hear. What day can you pick it up?</p>
+                    <p>I&#39;m glad to hear. What day can you pick it up?</p>
                 </div>
                 <div className="self-start bg-gray-200 rounded-lg px-4 py-2 max-w-sm">
                     <p>Tuesday, 6/11/25 @ 6:30 P.M.</p>
