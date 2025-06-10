@@ -15,7 +15,7 @@ export default function UploadImagePage() {
         <div className="relative w-full max-w-screen-md flex items-center justify-center h-12 mt-4 mb-6">
           {/* Left Arrow */}
           <button
-            onClick={() => router.push('/home')}
+            onClick={() => router.back()}
             className="absolute left-0"
           >
             <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />

@@ -19,12 +19,12 @@ export default function CreateListingPage() {
       <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col items-center px-4 pb-32">
         {/* Header */}
         <div className="w-full flex items-center justify-between py-4 max-w-screen-md">
-          <Link href="/home" className="text-[#A1C9FF]">
-            <button onClick={() => router.push('/home')}>
+          
+            <button onClick={() => router.back()}>
               <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />
             </button>
-          </Link>
-          <h1 className="text-lg sm:text-xl font-bold text-center flex-1 -ml-6">CREATE LISTING</h1>
+         
+          <h1 className="text-2xl font-bold text-center flex-1 -ml-6">CREATE LISTING</h1>
         </div>
 
         {/* Image Capture Section */}
@@ -67,25 +67,25 @@ export default function CreateListingPage() {
         </div>
 
         {/* Item Description with AI Generate */}
-        <div className="flex items-start gap-3">
-          <textarea
-            value={itemDescription}
-            onChange={(e) => setItemDescription(e.target.value)}
-            onFocus={() => setIsDescriptionFocused(true)}
-            onBlur={() => setIsDescriptionFocused(false)}
-            placeholder="Enter item description"
-            className={`flex-grow px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none resize-none transition-all duration-300 ${
-              isDescriptionFocused ? 'h-[50vh]' : 'h-28'
-            }`}
-          />
-          <button
-            type="button"
-            className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md h-fit mt-2 flex items-center gap-1"
-          >
-            <Sparkles className="h-4 w-4" />
-            Generate Description
-          </button>
-          </div>
+        <div className="relative w-full max-w-4xl">
+                    <textarea
+                        value={itemDescription}
+                        onChange={(e) => setItemDescription(e.target.value)}
+                        onFocus={() => setIsDescriptionFocused(true)}
+                        onBlur={() => setIsDescriptionFocused(false)}
+                        placeholder="Enter item description"
+                        className={`w-full px-4 py-3 pr-28 rounded-md text-black placeholder-gray-400 focus:outline-none resize-none transition-all duration-300 ${
+                        isDescriptionFocused ? 'h-[50vh]' : 'h-28'
+                        }`}
+                    />
+                    <button
+                        type="button"
+                        className="absolute top-2 right-2 bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-1 shadow"
+                    >
+                        <Sparkles className="h-4 w-4" />
+                        Generate Description
+                    </button>
+                </div>
            {/* Save Changes Button */}
           <div className="flex justify-center pt-4">
             <button
