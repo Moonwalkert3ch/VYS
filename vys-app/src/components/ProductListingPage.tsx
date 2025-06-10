@@ -52,12 +52,15 @@ export default function ProductListingPage() {
 
                 {/* Product Name */}
                 <h2 className="text-lg sm:text-xl font-bold mt-4">Product Name</h2>
+                <h3 className="text-ls sm:text-base">Delivery Method: Pick up</h3>
+                <h3 className="text-ls sm:text-base">Availability Status: Available</h3>
 
                 {/* Scrollable Description */}
+                <h3 className="text-lg sm:text-xl font-bold">Product Description</h3>
                 <div className="bg-white text-black p-4 rounded-lg max-h-48 overflow-y-auto text-sm">
-                <p>
-                    This is a placeholder for the product description. The area is scrollable in case of a long description. You can add more details here including condition, materials, or backstory of the item. To show how the description looks when it is long, you can add more text here. This is a placeholder for the product description. The area is scrollable in case of a long description. You can add more details here including condition, materials, or backstory of the item.
-                </p>
+                    <p>
+                        This is a placeholder for the product description. The area is scrollable in case of a long description. You can add more details here including condition, materials, or backstory of the item. To show how the description looks when it is long, you can add more text here. This is a placeholder for the product description. The area is scrollable in case of a long description. You can add more details here including condition, materials, or backstory of the item.
+                    </p>
                 </div>
 
                 <h3 className="text-lg sm:text-xl font-bold mt-4">Price</h3>
