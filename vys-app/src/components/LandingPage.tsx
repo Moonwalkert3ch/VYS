@@ -6,6 +6,7 @@ import { Suspense } from 'react';
 import { GLTFLoader } from 'three-stdlib';
 import { useLoader } from '@react-three/fiber';
 import Image from 'next/image';
+import Link from 'next/link';
 
 function GlassesModel() {
   const gltf = useLoader(GLTFLoader, '/assets/models/3d-glasses.gltf');
@@ -90,9 +91,11 @@ export default function LandingPage() {
         <p className="text-base sm:text-lg md:text-xl mb-6">
           Join the VYS community today and start visualizing your secondhand items like never before! 
         </p>
-        <button className="bg_landing_outline text-[#A1C9FF] px-6 py-3 rounded-lg shadow-lg hover:bg-[#301C47] transition-colors">
-          Get Started
-        </button>
+        <Link href="/sign-up">
+          <button className="bg_landing_outline text-[#A1C9FF] px-6 py-3 rounded-lg shadow-lg hover:bg-[#301C47] transition-colors">
+            Get Started
+          </button>
+        </Link>
       </section>
       {/* Footer Section */}
       <footer className="w-full max-w-6xl text-center py-6 shadow-lg mt-10">

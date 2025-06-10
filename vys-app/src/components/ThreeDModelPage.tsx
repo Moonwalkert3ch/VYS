@@ -12,11 +12,19 @@ export default function ThreeDModelPage() {
             <div className="relative w-full max-w-screen-md flex items-center justify-center h-12 mt-4 mb-6">
                 <h1 className="text-2xl font-bold text-center">3D Model</h1>
             </div>
-
-            {/* Placeholder for 3D Model Upload */}
-            <div className="bg-gray-300 aspect-square w-full max-w-md flex items-center justify-center rounded-md">
-                <p className="text-black">3D Model Rendering Area</p>
+            
+            {/* Placeholder for 4 3D Model Uploads in a 2x2 grid */}
+            <div className="grid grid-cols-2 gap-4 w-full max-w-2xl mx-auto">
+            {[1, 2, 3, 4].map((model, index) => (
+                <div
+                key={index}
+                className="bg-gray-300 aspect-square w-full flex items-center justify-center rounded-md"
+                >
+                <p className="text-black">3D Model {model}</p>
+                </div>
+            ))}
             </div>
+
 
             {/* Action Buttons: Accept, Retry, Cancel */}
             <div className="mt-10 flex justify-center gap-10 w-full">
