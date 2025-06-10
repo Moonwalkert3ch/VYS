@@ -18,7 +18,7 @@ export default function ThreeDModelPage() {
             {[1, 2, 3, 4].map((model, index) => (
                 <div
                 key={index}
-                className="bg-gray-300 aspect-square w-full flex items-center justify-center rounded-md"
+                className="bg-gray-300 aspect-square w-full flex items-center justify-center rounded-md hover:bg-[#A1C9FF] hover:text-indigo-950 transition-colors cursor-pointer"
                 >
                 <p className="text-black">3D Model {model}</p>
                 </div>
