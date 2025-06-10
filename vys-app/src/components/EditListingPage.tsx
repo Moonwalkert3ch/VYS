@@ -13,6 +13,10 @@ export default function EditListingPage() {
   const [itemName, setItemName] = useState('');
   const [itemDescription, setItemDescription] = useState('');
   const [isDescriptionFocused, setIsDescriptionFocused] = useState(false);
+  const [isAvailable, setIsAvailable] = useState(true);
+  const [deliveryMethod, setDeliveryMethod] = useState<'pickup' | 'ship'>('pickup');
+
+
 
   return (
     <>
@@ -25,7 +29,7 @@ export default function EditListingPage() {
                 >
                 <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />
                 </button>
-                <h1 className="text-2xl font-bold text-center w-full">Edit Listing</h1>
+                <h1 className="text-2xl font-bold text-center w-full">EDIT LISTING</h1>
             </div>
 
             {/* 3D Model Placeholder */}
@@ -35,9 +39,39 @@ export default function EditListingPage() {
                 </div>
             </Link>
 
-            {/* Form */}
-            <form className="w-full max-w-md space-y-4">
-                {/* Price */}
+            {/* Delivery Method Options */}
+            <div className="w-full max-w-md space-y-2 mb-4">
+                <label className="block font-medium text-sm text-[#A1C9FF]">Delivery Method:</label>
+                <div className="flex gap-6">
+                <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                    type="radio"
+                    name="delivery"
+                    value="pickup"
+                    checked={deliveryMethod === 'pickup'}
+                    onChange={() => setDeliveryMethod('pickup')}
+                    className="form-radio text-blue-600"
+                />
+                <span className="text-sm">Pick up only</span>
+                </label>
+                <label className="flex items-center gap-2 cursor-pointer">
+                <input
+                    type="radio"
+                    name="delivery"
+                    value="ship"
+                    checked={deliveryMethod === 'ship'}
+                    onChange={() => setDeliveryMethod('ship')}
+                    className="form-radio text-blue-600"
+                />
+                <span className="text-sm">Ship only</span>
+                </label>
+            </div>
+            </div>
+
+            {/* Price + Availability Toggle Row */}
+            <div className="w-full max-w-md space-y-4">
+                <div className="flex justify-between items-center w-full">
+                    {/* Price Input */}
                     <input
                     type="number"
                     value={price}
@@ -46,8 +80,24 @@ export default function EditListingPage() {
                     className="w-36 px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none"
                     />
 
+                    {/* Toggle Switch */}
+                    <div className="flex items-center gap-2">
+                    <span className="text-sm">Availability Status:</span>
+                    <label className="relative inline-flex items-center cursor-pointer">
+                        <input
+                        type="checkbox"
+                        className="sr-only peer"
+                        checked={isAvailable}
+                        onChange={() => setIsAvailable((prev) => !prev)}
+                        />
+                        <div className="w-11 h-6 bg-red-600 peer-focus:outline-none peer-focus:ring-2 peer-focus:ring-blue-500 rounded-full peer peer-checked:bg-lime-500 after:content-[''] after:absolute after:left-[2px] after:top-[2px] after:bg-indigo-950 after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:after:translate-x-full peer-checked:after:border-white"></div>
+                    </label>
+                    </div>
+                </div>
+            </div>
+
                 {/* Item Name with AI Generate */}
-                <div className="flex items-center gap-3">
+                <div className="flex items-center gap-4 w-full max-w-md mt-4">
                     <input
                         type="text"
                         value={itemName}
@@ -65,7 +115,7 @@ export default function EditListingPage() {
                 </div>
 
                 {/* Item Description with AI Generate */}
-                <div className="relative w-full max-w-4xl">
+                <div className="relative w-full max-w-4xl mt-4">
                     <textarea
                         value={itemDescription}
                         onChange={(e) => setItemDescription(e.target.value)}
@@ -97,7 +147,6 @@ export default function EditListingPage() {
                         </button>
                     </Link>
                 </div>
-            </form>
         </main>
 
         <BottomNavBar />

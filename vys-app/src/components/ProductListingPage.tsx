@@ -5,7 +5,7 @@ import { useState } from 'react';
 // import { UserCircle2 } from 'lucide-react';
 import { ArrowLeft } from 'lucide-react';
 import { useRouter } from 'next/navigation';
-import Link from 'next/link';
+// import Link from 'next/link';
 import BottomNavigationBar from '@/components/BottomNavBar';
 
 export default function ProductListingPage() {
@@ -20,11 +20,12 @@ export default function ProductListingPage() {
         <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col items-center p-4 pb-32">
             {/* Header */}
             <div className="w-full flex items-center justify-between py-4 max-w-screen-md">
-            <Link href="/edit-listing cursor-pointer">
-                <button onClick={() => router.back()}>
+                <button
+                    onClick={() => router.back()}
+                        className="absolute left-0"
+                    >
                     <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />
                 </button>
-            </Link>
             <h1 className="text-2xl font-bold text-center flex-1 -ml-6">PRODUCT LISTING</h1>
             </div>
 

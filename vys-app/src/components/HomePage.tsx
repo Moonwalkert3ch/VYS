@@ -20,8 +20,11 @@ export default function HomePage() {
                 HOME
             </h1>
           </header>
+           <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF] mt-8">
+                Search
+        </h2>
         {/* Search Bar Row */}
-        <div className="w-full max-w-screen-lg flex flex-row sm:flex-row items-center gap-4 mt-4 px-4">
+        <div className="w-full max-w-screen-lg flex flex-row sm:flex-row items-center gap-2 mt-4 px-2">
           {/* Main Search Box */}
           <div className="flex items-center bg-white text-gray-500 rounded-full px-4 py-2 w-full sm:flex-1">
             <Search className="h-5 w-5 text-gray-400 mr-2" />
@@ -33,11 +36,11 @@ export default function HomePage() {
           </div>
 
           {/* Zip Code + Go */}
-          <div className="flex items-center gap-2 w-full sm:w-auto">
+          <div className="flex items-center gap-4 w-full sm:w-auto">
             <input
               type="text"
               placeholder="Enter zip code"
-              className="rounded-md px-3 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none w-full sm:w-28"
+              className="rounded-md px-2 py-2 text-sm text-gray-800 placeholder-gray-400 focus:outline-none w-full sm:w-24"
             />
             <button className="bg-[#052958] text-[#A1C9FF] font-semibold px-4 py-2 rounded-md hover:bg-[#45132F] transition">
               Go

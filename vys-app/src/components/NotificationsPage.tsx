@@ -48,7 +48,7 @@ export default function NotificationsPage() {
   return (
     <>
       <div className="max-w-2xl mx-auto p-6 bg-indigo-950">
-        <h1 className="text-2xl font-bold mb-4 text-[#A1C9FF] text-center">Notifications</h1>
+        <h1 className="text-2xl font-bold mb-4 text-[#A1C9FF] text-center">NOTIFICATIONS</h1>
         <ul className="space-y-4">
           {notifications.map((notification) => (
             <li

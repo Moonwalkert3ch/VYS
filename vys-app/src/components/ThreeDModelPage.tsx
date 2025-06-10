@@ -10,7 +10,7 @@ export default function ThreeDModelPage() {
         <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col p-4 pb-32 items-center">
             {/* Header */}
             <div className="relative w-full max-w-screen-md flex items-center justify-center h-12 mt-4 mb-6">
-                <h1 className="text-2xl font-bold text-center">3D Model</h1>
+                <h1 className="text-2xl font-bold text-center">3D MODEL</h1>
             </div>
             
             {/* Placeholder for 4 3D Model Uploads in a 2x2 grid */}

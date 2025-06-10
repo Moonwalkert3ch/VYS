@@ -9,7 +9,7 @@ export default function MyListingsPage () {
         <main className="min-h-screen px-6 py-8 bg-indigo-950 text-[#A1C9FF]">
             {/* Page Header */}
             <header className="mb-8">
-                <h1 className="text-2xl font-bold text-center">My VYS</h1>
+                <h1 className="text-2xl font-bold text-center">MY VYS</h1>
             </header>
 
             {/* section header */}

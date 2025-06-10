@@ -22,7 +22,7 @@ export default function UploadImagePage() {
           </button>
 
           {/* Centered Title */}
-          <h1 className="text-2xl font-bold text-center">Upload Images</h1>
+          <h1 className="text-2xl font-bold text-center">UPLOAD IMAGES</h1>
         </div>
 
         {/* Image Upload Grid */}
