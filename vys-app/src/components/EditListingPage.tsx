@@ -30,7 +30,7 @@ export default function EditListingPage() {
 
             {/* 3D Model Placeholder */}
             <Link href="/upload-image" className="block w-full max-w-md">
-                <div className="bg-gray-300 w-full aspect-square max-w-md flex items-center justify-center rounded-md mb-6">
+                <div className="bg-white w-full aspect-square max-w-md flex items-center justify-center rounded-md mb-6">
                     <p className='text-bold text-xl text-black text-center'>3d image rendered here</p>
                 </div>
             </Link>

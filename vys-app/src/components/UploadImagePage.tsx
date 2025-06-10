@@ -28,13 +28,13 @@ export default function UploadImagePage() {
         {/* Image Upload Grid */}
         <div className="grid grid-cols-3 gap-4 w-full max-w-md justify-center">
           {/* First Image Slot with Camera Icon */}
-          <div className="bg-gray-300 aspect-square flex items-center justify-center rounded-md">
+          <div className="bg-white aspect-square flex items-center justify-center rounded-md">
             <Camera className="h-8 w-8 text-black" />
           </div>
 
           {/* 5 More Slots with Plus Icons */}
           {[...Array(5)].map((_, i) => (
-            <div key={i} className="bg-gray-300 aspect-square flex items-center justify-center rounded-md">
+            <div key={i} className="bg-white aspect-square flex items-center justify-center rounded-md">
               <Plus className="h-6 w-6 text-black" />
             </div>
           ))}

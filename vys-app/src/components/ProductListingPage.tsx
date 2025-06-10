@@ -33,7 +33,7 @@ export default function ProductListingPage() {
                 {/* 3D Model + Additional Images Grid */}
                 <div className="grid grid-cols-3 gap-2 mt-8">
                 {/* 3D Model Placeholder */}
-                <div className="col-span-2 row-span-2 bg-gray-300 aspect-square rounded-md flex items-center justify-center text-black font-semibold text-sm">
+                <div className="col-span-2 row-span-2 bg-white aspect-square rounded-md flex items-center justify-center text-black font-semibold text-sm">
                     3D Model Placeholder
                 </div>
 
@@ -42,7 +42,7 @@ export default function ProductListingPage() {
                     <div
                     key={index}
                     onClick={() => setSelectedImage(src)}
-                    className="bg-gray-300 aspect-square rounded-md cursor-pointer flex items-center justify-center text-black text-sm hover:brightness-90"
+                    className="bg-white aspect-square rounded-md cursor-pointer flex items-center justify-center text-black text-sm hover:brightness-90"
                     >
                     View {index + 1}
                     </div>
@@ -55,7 +55,7 @@ export default function ProductListingPage() {
                 {/* Scrollable Description */}
                 <div className="bg-white text-black p-4 rounded-lg max-h-48 overflow-y-auto text-sm">
                 <p>
-                    This is a placeholder for the product description. The area is scrollable in case of a long description. You can add more details here including condition, materials, or backstory of the item.
+                    This is a placeholder for the product description. The area is scrollable in case of a long description. You can add more details here including condition, materials, or backstory of the item. To show how the description looks when it is long, you can add more text here. This is a placeholder for the product description. The area is scrollable in case of a long description. You can add more details here including condition, materials, or backstory of the item.
                 </p>
                 </div>
 
