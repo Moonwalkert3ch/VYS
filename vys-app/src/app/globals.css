@@ -53,13 +53,11 @@
 
   padding-top: 1rem;
   padding-bottom: 1rem;
-  height: 330px;
+  height: 200px;
 
   background:
-    url("/Nav Bar.png") no-repeat center 0.5rem,
-    url("/3Dglasses.png") no-repeat center 9rem;
+    url("/Nav Bar.png") no-repeat center 0.5rem;
   background-size: 60% auto, 100% auto;
-
   margin-bottom: 1rem;
 }
 
