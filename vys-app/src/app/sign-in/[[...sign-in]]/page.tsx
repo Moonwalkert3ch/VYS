@@ -55,24 +55,24 @@ export default function SignInPage() {
                   <Clerk.FieldError className="text-sm text-red-500" />
                 </Clerk.Field>
                 <SignIn.Action submit className="bg-purple-600 hover:bg-purple-700 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200">Continue</SignIn.Action>
-                <div className="flex items-center justify-center font-extrabold text-xl mt-2">
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
                   <div className="text-gray-300">sign in with</div>
                   <Clerk.Connection
                     name="google"
                     className="flex text-blue-400 font-medium hover:underline ml-2">
-                      <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                   </Clerk.Connection>
   
                   <Clerk.Connection
                     name="microsoft"
                     className="flex text-blue-400 font-medium hover:underline ml-2">
-                      <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                   </Clerk.Connection>
   
                   <Clerk.Connection
                     name="facebook"
                     className="flex text-blue-400 font-medium hover:underline ml-2">
-                      <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                   </Clerk.Connection>
                 </div>
               </div>
@@ -98,24 +98,24 @@ export default function SignInPage() {
                 </Clerk.Field>
 
                 <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200">Continue</SignIn.Action>
-                <div className="flex items-center justify-center font-extrabold text-xl mt-2">
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
                     <div className="text-gray-300">sign in with</div>
                     <Clerk.Connection
                       name="google"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
     
                     <Clerk.Connection
                       name="microsoft"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
     
                     <Clerk.Connection
                       name="facebook"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
                   </div>
                   <div className="mt-2 text-sm text-center text-gray-400">
@@ -141,24 +141,24 @@ export default function SignInPage() {
                 <SignIn.Action submit className="bg-purple-600 hover:bg-purple-700 text-gray-200 font-normal py-1 px-4 mb-6 rounded-full transition duration-200">Sign In</SignIn.Action>
                 <SignIn.Action navigate="forgot-password" className="text-sm text-purple-600 text-center underline">Forgot password?</SignIn.Action>
                 
-                                <div className="flex items-center justify-center font-extrabold text-xl mt-2">
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
                     <div className="text-gray-300">sign in with</div>
                     <Clerk.Connection
                       name="google"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
     
                     <Clerk.Connection
                       name="microsoft"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
     
                     <Clerk.Connection
                       name="facebook"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
                   </div>
                   <div className="mt-2 text-sm text-center text-gray-400">
@@ -184,24 +184,24 @@ export default function SignInPage() {
                 </Clerk.Field>
 
                 <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200">Continue</SignIn.Action>
-                              <div className="flex items-center justify-center font-extrabold text-xl mt-2">
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
                     <div className="text-gray-300">sign in with</div>
                     <Clerk.Connection
                       name="google"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
     
                     <Clerk.Connection
                       name="microsoft"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
     
                     <Clerk.Connection
                       name="facebook"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
                   </div>
                   <div className="mt-2 text-sm text-center text-gray-400">
@@ -231,24 +231,24 @@ export default function SignInPage() {
                   Go back
                 </div>
               </SignIn.Action>
-                            <div className="flex items-center justify-center font-extrabold text-xl mt-2">
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
                     <div className="text-gray-300">sign in with</div>
                     <Clerk.Connection
                       name="google"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
     
                     <Clerk.Connection
                       name="microsoft"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
     
                     <Clerk.Connection
                       name="facebook"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
                   </div>
                   <div className="mt-2 text-sm text-center text-gray-400">
@@ -277,24 +277,24 @@ export default function SignInPage() {
                   <Clerk.Input className="w-full rounded-full text-black bg-blue-200 p-3" />
                 <Clerk.FieldError className="text-sm text-red-500" />
               </Clerk.Field>
-                              <div className="flex items-center justify-center font-extrabold text-xl mt-2">
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
                     <div className="text-gray-300">sign in with</div>
                     <Clerk.Connection
                       name="google"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
     
                     <Clerk.Connection
                       name="microsoft"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
     
                     <Clerk.Connection
                       name="facebook"
                       className="flex text-blue-400 font-medium hover:underline ml-2">
-                        <Clerk.Icon className="w-8 h-8 self-center" />
+                        <Clerk.Icon className="w-6 h-6 self-center" />
                     </Clerk.Connection>
                   </div>
                   <div className="mt-2 text-sm text-center text-gray-400">

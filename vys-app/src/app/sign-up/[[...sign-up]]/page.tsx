@@ -104,24 +104,24 @@ export default function SignUpPage() {
                 }}
               >Continue</SignUp.Action>
            
-              <div className="flex items-center justify-center font-extrabold text-xl mt-2">
+              <div className="flex items-center justify-center font-bold text-xl mt-2">
                 <div className="text-gray-300">sign up with</div>
                 <Clerk.Connection
                   name="google"
                   className="flex text-blue-400 font-medium hover:underline ml-2">
-                    <Clerk.Icon className="w-8 h-8 self-center" />
+                  <Clerk.Icon className="w-6 h-6 self-center" />
                 </Clerk.Connection>
 
                 <Clerk.Connection
                   name="microsoft"
                   className="flex text-blue-400 font-medium hover:underline ml-2">
-                    <Clerk.Icon className="w-8 h-8 self-center" />
+                  <Clerk.Icon className="w-6 h-6 self-center" />
                 </Clerk.Connection>
 
                 <Clerk.Connection
                   name="facebook"
                   className="flex text-blue-400 font-medium hover:underline ml-2">
-                    <Clerk.Icon className="w-8 h-8 self-center" />
+                  <Clerk.Icon className="w-6 h-6 self-center" />
                 </Clerk.Connection>
               </div>
             </div>
