@@ -19,7 +19,7 @@ import * as SignIn from '@clerk/elements/sign-in';
 
 export default function SignInPage() {
   return (
-    <div className="flex min-h-screen items-center justify-center">
+    <div className="flex min-h-screen items-center justify-center bg-gradient-to-b from-[#7C0003] to-[#002D69]">
       <div className="sign-in-card-head p-6 rounded-xl shadow-xl w-full max-w-md">
         
         <SignIn.Root>
@@ -131,7 +131,7 @@ export default function SignInPage() {
                 <Clerk.FieldError className="text-sm text-red-500" />
               </Clerk.Field>
 
-              <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200 self-start self-center">Reset password</SignIn.Action>
+              <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200 self-center">Reset password</SignIn.Action>
             </div>
           </SignIn.Step>
         </SignIn.Root>
