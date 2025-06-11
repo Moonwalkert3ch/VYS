@@ -52,7 +52,7 @@ export default function SignUpPage() {
             </div>
 
 
-            <h1 className="font-Outfit font-bold text-2xl font-bold text-center text-gray-200 my-4">CREATE ACCOUNT</h1>
+            <h1 className="font-Outfit font-bold text-2xl font-bold text-center text-gray-200 my-2">CREATE ACCOUNT</h1>
 
             <div className="flex flex-col items-center gap-4">
               <Clerk.Field
@@ -104,7 +104,7 @@ export default function SignUpPage() {
                 }}
               >Continue</SignUp.Action>
            
-              <div className="flex items-center justify-center font-extrabold text-xl mt-4">
+              <div className="flex items-center justify-center font-extrabold text-xl mt-2">
                 <div className="text-gray-300">sign up with</div>
                 <Clerk.Connection
                   name="google"
@@ -125,9 +125,9 @@ export default function SignUpPage() {
                 </Clerk.Connection>
               </div>
             </div>
-            <div className="mt-6 mb-6 text-sm text-center text-gray-300">
+            <div className="mt-4 mb-4 text-sm text-center text-gray-300">
               Already have an account?{' '}
-              <Link href="/sign-in" className="text-blue-400 font-medium hover:underline">
+              <Link href="/sign-in" className="text-purple-600 font-outfit font-extrabold hover:underline">
                 SIGN-IN
               </Link>
             </div>
@@ -138,12 +138,12 @@ export default function SignUpPage() {
               <div className="flex flex-col items-center gap-4">
                 <h1 className="text-xl font-bold text-center text-gray-200 mb-1">Verify your email</h1>
                   <p className="text-center text-sm text-gray-300">
-                    We've sent a code to <span className="font-semibold">{identifier}</span>.
+                    We've sent a code to: <span className="font-semibold">{identifier}</span>
                   </p>
 
                   <Clerk.Field name="code" className="w-full max-w-xs">
-                    <Clerk.Label className="text-gray-300 mr-1">Email code:</Clerk.Label>
-                    <Clerk.Input className="w-full rounded-full" />
+                    <Clerk.Label className="font-Outfit font-extrabold text-gray-200 pl-2 mb-2">Email code:</Clerk.Label>
+                    <Clerk.Input className="w-full rounded-full bg-blue-200 p-3" />
                     <Clerk.FieldError className="text-sm text-red-500" />
                   </Clerk.Field>
 
