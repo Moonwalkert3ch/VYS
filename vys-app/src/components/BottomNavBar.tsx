@@ -23,10 +23,12 @@ export default function BottomNavBar() {
             Inbox
           </li>
         </Link>
-        <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
-          <Bell className="h-5 w-5 mb-1" />
-          Notifications
-        </li>
+        <Link href="/notifications">
+          <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
+            <Bell className="h-5 w-5 mb-1" />
+            Notifications
+          </li>
+        </Link>
         <Link href="/my-listings">
           <li className="flex flex-col items-center text-xs sm:text-sm cursor-pointer">
             <Store className="h-5 w-5 mb-1" />

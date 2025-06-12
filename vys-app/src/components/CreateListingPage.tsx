@@ -30,7 +30,7 @@ export default function CreateListingPage() {
         {/* Image Capture Section */}
         {/* Capture Images */}
         <Link href="/upload-image" className="block w-full max-w-md">
-          <div className="cursor-pointer bg-gray-300 w-full aspect-square max-w-md flex flex-col items-center justify-center rounded-md transition hover:brightness-95">
+          <div className="cursor-pointer bg-white w-full aspect-square max-w-md flex flex-col items-center justify-center rounded-md transition hover:brightness-95">
             <Camera className="h-10 w-10 text-black mb-2" />
             <span className="text-black font-medium">Capture Images</span>
           </div>
