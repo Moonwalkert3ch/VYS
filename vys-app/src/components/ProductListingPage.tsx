@@ -9,7 +9,7 @@ import { useRouter } from 'next/navigation';
 import BottomNavigationBar from '@/components/BottomNavBar';
 
 export default function ProductListingPage() {
-  const [selectedImage, setSelectedImage] = useState(null);
+    const [selectedImage, setSelectedImage] = useState(null);
     const router = useRouter();
   
 
@@ -33,21 +33,21 @@ export default function ProductListingPage() {
 
                 {/* 3D Model + Additional Images Grid */}
                 <div className="grid grid-cols-3 gap-2 mt-8">
-                {/* 3D Model Placeholder */}
-                <div className="col-span-2 row-span-2 bg-white aspect-square rounded-md flex items-center justify-center text-black font-semibold text-sm">
-                    3D Model Placeholder
-                </div>
-
-                {/* 6 Additional Image Placeholders */}
-                {additionalImages.map((src, index) => (
-                    <div
-                    key={index}
-                    onClick={() => setSelectedImage(src)}
-                    className="bg-white aspect-square rounded-md cursor-pointer flex items-center justify-center text-black text-sm hover:brightness-90"
-                    >
-                    View {index + 1}
+                    {/* 3D Model Placeholder */}
+                    <div className="col-span-2 row-span-2 bg-white aspect-square rounded-md flex items-center justify-center text-black font-semibold text-sm">
+                        3D Model Placeholder
                     </div>
-                ))}
+
+                    {/* 6 Additional Image Placeholders */}
+                    {additionalImages.map((src, index) => (
+                        <div
+                        key={index}
+                        onClick={() => setSelectedImage(src)}
+                        className="bg-white aspect-square rounded-md cursor-pointer flex items-center justify-center text-black text-sm hover:brightness-90"
+                        >
+                        View {index + 1}
+                        </div>
+                 ))}
                 </div>
 
                 {/* Product Name */}
