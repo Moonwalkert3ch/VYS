@@ -123,13 +123,15 @@ export default function CreateListingPage() {
                     placeholder="Enter item name"
                     className="flex-1 px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none"
                     />
-                    <button
-                    type="button"
-                    className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-2 whitespace-nowrap"
-                    >
-                    <Sparkles className="h-4 w-4" />
-                    Generate Name
-                    </button>
+                    <Link href="/create-generate-name" className="flex items-center">
+                      <button
+                      type="button"
+                      className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-2 whitespace-nowrap"
+                      >
+                      <Sparkles className="h-4 w-4" />
+                      Generate Name
+                      </button>
+                    </Link>
                 </div>
             </div>
 
@@ -146,6 +148,7 @@ export default function CreateListingPage() {
                         isDescriptionFocused ? 'h-[50vh]' : 'h-28'
                         }`}
                     />
+                    <Link href="/create-generate-description">
                     <button
                         type="button"
                         className="absolute top-14 right-2 bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-1 shadow"
@@ -153,6 +156,7 @@ export default function CreateListingPage() {
                         <Sparkles className="h-4 w-4" />
                         Generate Description
                     </button>
+                    </Link>
                 </div>
 
            {/* Save Changes Button */}

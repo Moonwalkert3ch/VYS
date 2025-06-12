@@ -137,13 +137,15 @@ export default function EditListingPage() {
                     placeholder="Enter item name"
                     className="flex-1 px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none"
                     />
-                    <button
-                    type="button"
-                    className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-2 whitespace-nowrap"
-                    >
-                    <Sparkles className="h-4 w-4" />
-                    Generate Name
-                    </button>
+                    <Link href="/edit-generate-name">
+                        <button
+                        type="button"
+                        className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-2 whitespace-nowrap"
+                        >
+                        <Sparkles className="h-4 w-4" />
+                        Generate Name
+                        </button>
+                    </Link>
                 </div>
             </div>
 
@@ -160,6 +162,7 @@ export default function EditListingPage() {
                         isDescriptionFocused ? 'h-[50vh]' : 'h-28'
                         }`}
                     />
+                    <Link href="/edit-generate-description">
                     <button
                         type="button"
                         className="absolute top-10 right-2 bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-1 shadow"
@@ -167,6 +170,7 @@ export default function EditListingPage() {
                         <Sparkles className="h-4 w-4" />
                         Generate Description
                     </button>
+                    </Link>
                 </div>
 
 
@@ -177,7 +181,7 @@ export default function EditListingPage() {
                             type="submit"
                             className="bg-[#052958] hover:bg-indigo-950 text-[#A1C9FF] outline font-semibold py-2 px-6 rounded-full transition duration-200"
                         >
-                            Save
+                            Submit
                         </button>
                     </Link>
                     
