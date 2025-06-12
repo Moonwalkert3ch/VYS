@@ -50,9 +50,11 @@ export default function ThreeDModelPage() {
 
                 {/* Cancel */}
                 <div className="flex flex-col items-center">
+                    <Link href="/create-listing">
                 <button className="bg-red-600 hover:bg-[#45132F] p-3 rounded-full">
                     <XCircle className="h-6 w-6 text-[#A1C9FF]" />
                 </button>
+                </Link>
                 <span className="text-sm mt-1">Cancel</span>
                 </div>
             </div>
