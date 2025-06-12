@@ -1,0 +1,71 @@
+generator client {
+  provider = "prisma-client-js"
+  output   = "../src/generated/prisma"
+}
+
+datasource db {
+  provider = "postgresql"
+  url      = env("DATABASE_URL")
+}
+
+model User {
+  id           String        @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  clerk_id     String        @map("clerk_id")
+  email        String
+  created_at   DateTime      @default(now()) @map("created_at")
+  listings     Listing[]
+  transactions Transaction[]
+
+  @@map("users")
+}
+
+model Listing {
+  id           String         @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  title        String
+  description  String?
+  price        Float
+  status       String
+  created_at   DateTime       @default(now()) @map("created_at")
+  user_id      String         @map("user_id") @db.Uuid
+  images       ListingImage[]
+  models       ListingModel[]
+  users        User?          @relation(fields: [user_id], references: [id])
+  transactions Transaction[]
+
+  @@map("listings")
+}
+
+model ListingImage {
+  id         String  @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  image_url  String
+  listing_id String  @db.Uuid
+  listing    Listing @relation(fields: [listing_id], references: [id])
+
+  @@map("listing_images")
+}
+
+model ListingModel {
+  id           String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  model_url    String
+  meshy_job_id String?
+  status       String
+  created_at   DateTime @default(now())
+  listing_id   String   @db.Uuid
+  listing      Listing  @relation(fields: [listing_id], references: [id])
+
+  @@map("listing_models")
+}
+
+model Transaction {
+  id                String   @id @default(dbgenerated("gen_random_uuid()")) @db.Uuid
+  stripe_session_id String?  @map("stripe_session_id")
+  amount            Float
+  status            String
+  created_at        DateTime @default(now()) @map("created_at")
+  buyer_id          String   @map("buyer_id") @db.Uuid
+  listing_id        String   @map("listing_id") @db.Uuid
+  listing           Listing  @relation(fields: [listing_id], references: [id])
+  buyer             User?    @relation(fields: [buyer_id], references: [id])
+
+  @@map("transactions")
+}

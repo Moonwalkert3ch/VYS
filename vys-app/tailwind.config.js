@@ -5,6 +5,7 @@ module.exports = {
     "./pages/**/*.{js,ts,jsx,tsx}",
     "./components/**/*.{js,ts,jsx,tsx}",
     "./src/app/**/*.{js,ts,jsx,tsx}", // using the `src/app` directory
+     "./src/components/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
   	extend: {
@@ -16,10 +17,15 @@ module.exports = {
   				'20%,50%': {
   					opacity: '0'
   				}
-  			}
+  			},
+			'fade-in-right': {
+			'0%': { opacity: 0, transform: 'translateX(-20px)' },
+			'100%': { opacity: 1, transform: 'translateX(0)' },
+			},
   		},
   		animation: {
-  			'caret-blink': 'caret-blink 1.25s ease-out infinite'
+  			'caret-blink': 'caret-blink 1.25s ease-out infinite',
+			'fade-in-right': 'fade-in-right 0.8s ease-out forwards',
   		},
   		borderRadius: {
   			lg: 'var(--radius)',
@@ -67,7 +73,10 @@ module.exports = {
   				'4': 'hsl(var(--chart-4))',
   				'5': 'hsl(var(--chart-5))'
   			}
-  		}
+  		},
+		fontFamily: {
+        Outfit: ['var(--font-outfit)'],
+      },
   	}
   },
   plugins: [require("tailwindcss-animate")],
