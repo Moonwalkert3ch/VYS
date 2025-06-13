@@ -65,7 +65,7 @@ export default function HomePage() {
                 HOME
             </h1>
           </header>
-           <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF] mt-8">
+           <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF]">
                 Search
         </h2>
         {/* Search Bar Row */}
