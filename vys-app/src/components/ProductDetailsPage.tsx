@@ -2,26 +2,39 @@
 
 import Image from 'next/image';
 import Link from 'next/link';
-import { Heart, ChevronDown, MessageCircle } from 'lucide-react';
+import { Heart, ChevronDown, MessageCircle, ArrowLeft } from 'lucide-react';
 import BottomNavBar from '@/components/BottomNavBar';
+import { useRouter } from 'next/navigation';
 
 export default function ProductDetailsPage() {
+  const router = useRouter();
   return (
     <>
-      <main className="max-w-md mx-auto p-4 text-white bg-[#052958] min-h-screen pb-32">
+      <main className="max-w-screen-md mx-auto p-4 sm:p-6 md:p-8 text-white bg-indigo-950 min-h-screen pb-40">
+         {/* Header */}
+            <div className="w-full flex items-center justify-between py-4 px-8 max-w-screen-md">
+                <button
+                    onClick={() => router.back()}
+                        className="absolute left-2"
+                    >
+                    <ArrowLeft className="text-[#A1C9FF] h-6 w-6" />
+                </button>
+            <h1 className="text-2xl text-[#A1C9FF] font-bold text-center flex-1 -ml-6">PRODUCT DETAILS</h1>
+            </div>
+
         {/* Image Section */}
         <div className="relative rounded-lg overflow-hidden">
           <Image
             src="/images/sample-product.png"
             alt="Product"
-            width={400}
-            height={400}
-            className="w-full h-auto object-contain bg-white rounded"
+            width={800}
+            height={800}
+            className="w-full max-h-[400px] object-contain bg-white rounded"
           />
           {/* Heart Icon */}
-          <button className="absolute top-2 right-2 p-2 rounded-full hover:bg-[#A1C9FF]">
-            <Heart className="w-5 h-5 inline text-indigo-950" />
-            <span className="text-sm font-bold ml-1">+</span>
+          <button className="absolute top-2 right-2 p-2 rounded-full bg-white hover:bg-[#A1C9FF] transition">
+            <Heart className="w-5 h-5 text-indigo-950" />
+            <span className="text-sm font-bold ml-1 text-indigo-950">+</span>
           </button>
 
           {/* Discount Label */}
@@ -31,11 +44,11 @@ export default function ProductDetailsPage() {
         </div>
 
         {/* Thumbnail Images */}
-        <div className="flex justify-between mt-4 space-x-2 overflow-x-auto">
+        <div className="flex mt-4 space-x-2 overflow-x-auto sm:justify-start">
           {[1, 2, 3, 4, 5].map((img, i) => (
             <div
               key={i}
-              className="w-20 h-20 bg-gray-300 rounded flex items-center justify-center text-black text-xs font-semibold"
+              className="w-20 h-20 sm:w-24 sm:h-24 bg-gray-300 rounded flex items-center justify-center text-black text-xs font-semibold shrink-0"
             >
               Other Image
             </div>
@@ -43,8 +56,8 @@ export default function ProductDetailsPage() {
         </div>
 
         {/* Description */}
-        <div className="mt-4">
-          <h2 className="font-semibold text-lg leading-snug">
+        <div className="mt-6">
+          <h2 className="font-semibold text-lg sm:text-xl leading-snug">
             Belkin 2-In-1 MagSafe Wireless Charging Dock 15W Fast Charger, Includes Power Supply
           </h2>
           <button className="mt-1 flex items-center gap-1 text-[#A1C9FF] text-sm hover:underline">
@@ -54,10 +67,10 @@ export default function ProductDetailsPage() {
         </div>
 
         {/* Seller Info */}
-        <div className="mt-6 flex items-center justify-between px-2">
+        <div className="mt-6 flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3 px-2">
           <div>
-            <p className="text-sm text-white font-semibold">Seller Name</p>
-            <span className="text-green-400 text-xs font-bold">✅ Available</span>
+            <p className="text-sm sm:text-base text-white font-semibold">Seller Name</p>
+            <span className="text-green-400 text-xs sm:text-sm font-bold">✅ Available</span>
           </div>
           <Link href="/messages">
             <button className="bg-white text-[#052958] px-3 py-1 rounded flex items-center text-sm font-medium hover:bg-gray-200">
@@ -69,14 +82,14 @@ export default function ProductDetailsPage() {
 
         {/* Price Section */}
         <div className="mt-6 px-2">
-          <div className="text-xl font-bold text-white">$79.99</div>
-          <div className="text-sm line-through text-gray-300">$119.99</div>
-          <div className="text-green-400 text-sm font-semibold">15% Off</div>
+          <div className="text-xl sm:text-2xl font-bold text-white">$79.99</div>
+          <div className="text-sm sm:text-base line-through text-gray-300">$119.99</div>
+          <div className="text-green-400 text-sm sm:text-base font-semibold">15% Off</div>
         </div>
 
         {/* Add to Cart Button */}
         <div className="mt-8 px-2">
-          <button className="w-full bg-[#A1C9FF] text-[#052958] font-bold py-3 rounded hover:bg-[#8abfff] transition">
+          <button className="w-full bg-[#052958] outline text-[#A1C9FF] font-bold py-3 rounded hover:bg-indigo-950 transition text-base sm:text-lg">
             Add to Cart
           </button>
         </div>
@@ -89,4 +102,3 @@ export default function ProductDetailsPage() {
     </>
   );
 }
-

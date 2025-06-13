@@ -93,7 +93,56 @@ export default function HomePage() {
           </div>
         </div>
       
-       
+       {/* Listings Section */}
+        <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF] mt-8">
+                Favorites
+        </h2>
+            <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+              {products.map((product) => (
+                <Link
+                  key={product.id}
+                  href={`/product-details`}
+                  className="relative bg-white rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 p-3 text-indigo-950"
+                  style={{
+                    boxShadow: '0 10px 20px rgba(161, 201, 255, 0.4)',
+                  }}
+                >
+                  {/* Product Image */}
+                  <div className="relative w-full h-40 bg-gray-100 rounded-lg overflow-hidden">
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      layout="fill"
+                      objectFit="contain"
+                      className="p-2"
+                    />
+                    {/* Favorite Icon */}
+                    <div className="absolute top-2 right-2 bg-black/60 rounded-full p-1 text-white hover:bg-black/80">
+                      <Heart className="w-4 h-4 inline" />
+                      <span className="ml-1 font-bold text-sm">+</span>
+                    </div>
+                    {/* Discount Badge */}
+                    <div className="absolute bottom-2 left-2 bg-green-400 text-black text-xs font-bold px-2 py-0.5 rounded-md">
+                      {product.discount}
+                    </div>
+                  </div>
+
+                  {/* Product Info */}
+                  <div className="mt-3 space-y-1">
+                    <h3 className="text-sm font-semibold leading-tight">
+                      {product.title}
+                    </h3>
+                    <div className="flex items-center gap-2">
+                      <span className="text-base font-bold">{product.price}</span>
+                      <span className="text-sm line-through text-gray-500">
+                        {product.originalPrice}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </section>
+
 
       {/* Listings Section */}
         <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF] mt-8">
