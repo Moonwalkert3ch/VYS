@@ -1,6 +1,7 @@
 'use client';
 
 import { Trash2 } from "lucide-react";
+import Link from "next/link";
 
 interface CartItem {
   id: number;
@@ -53,9 +54,11 @@ export default function CartPopOut({ isOpen, onClose, cartItems, removeItem }: C
 
         <div className="border-t border-[#A1C9FF] pt-4 mt-4">
           <p className="text-lg font-semibold">Total: ${total}</p>
-          <button className="mt-4 w-full bg-[#052958] text-[#A1C9FF] py-2 rounded outline hover:bg-indigo-950">
-            Checkout
-          </button>
+          <Link href="/billing-summary">
+            <button className="mt-4 w-full bg-[#052958] text-[#A1C9FF] py-2 rounded outline hover:bg-indigo-950">
+              Checkout
+            </button>
+          </Link>
         </div>
       </div>
     </div>
