@@ -37,7 +37,7 @@ export default function EditGenerateDescriptionPage() {
       <div className="mt-4 flex justify-center gap-10 w-full">
         {/* Accept */}
         <div className="flex flex-col items-center">
-          <Link href="/create-listing" className="flex flex-col items-center">
+          <Link href="/edit-listing" className="flex flex-col items-center">
             <button className="bg-green-600 hover:bg-[#45132F] p-3 rounded-full">
               <CheckCircle className="h-6 w-6 text-[#A1C9FF]" />
             </button>
@@ -57,7 +57,7 @@ export default function EditGenerateDescriptionPage() {
 
         {/* Cancel */}
         <div className="flex flex-col items-center">
-          <Link href="/create-listing" className="flex flex-col items-center">
+          <Link href="/edit-listing" className="flex flex-col items-center">
             <button className="bg-red-600 hover:bg-[#45132F] p-3 rounded-full">
               <XCircle className="h-6 w-6 text-[#A1C9FF]" />
             </button>

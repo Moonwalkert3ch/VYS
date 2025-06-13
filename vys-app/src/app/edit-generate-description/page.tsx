@@ -1,6 +1,6 @@
-import EditGenerateDescriptionPage from "@/components/EditGenerateNamePage";
+import EditGenerateDescriptionPage from "@/components/EditGenerateDescriptionPage";
 
-export default function EditGeneralName() {
+export default function EditGeneralDescription() {
   return (
     <EditGenerateDescriptionPage />
   )
