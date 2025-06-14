@@ -60,12 +60,12 @@ export default function HomePage() {
     <>
       <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col p-4 pb-32">
          {/* Page Header */}
-        <header className="w-full max-w-screen-lg mt-4 mb-6">
+        <header className="w-full max-w-screen-lg mt-4 mb-4">
             <h1 className="text-2xl sm:text-3xl font-bold text-center text-[#A1C9FF]">
                 HOME
             </h1>
           </header>
-           <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF] mt-8">
+           <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF]">
                 Search
         </h2>
         {/* Search Bar Row */}
