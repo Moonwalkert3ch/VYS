@@ -1,225 +1,310 @@
+// import { SignIn } from '@clerk/nextjs';
+
+// export default function Page() {
+//   return (
+//     <div className="flex min-h-screen items-center justify-center">
+//         <SignIn appearance={{
+//           elements: {
+//             card: "sign-in-card-head bg p-6 rounded-xl shadow-xl",
+//           },
+//         }} />
+//     </div>
+//   );
+// }
 'use client'
 
+import React, { Suspense, useState } from 'react';
 import Link from 'next/link';
 import * as Clerk from '@clerk/elements/common';
+import { OrbitControls, Stage } from '@react-three/drei';
+import { Canvas, useLoader } from '@react-three/fiber';
+import { GLTFLoader } from 'three/examples/jsm/Addons.js';
 import * as SignIn from '@clerk/elements/sign-in';
 
 export default function SignInPage() {
+
+  function GlassesModel() {
+    const gltf = useLoader(GLTFLoader, '/assets/models/3d-glasses.gltf');
+    return <primitive object={gltf.scene} scale={2.5} />;
+  }
+
   return (
-    <div className="flex flex-col font-outfit items-center justify-center min-h-screen bg-gradient-to-b from-red-900 via-purple-900 to-blue-900 text-white px-4">
-      <img src="/vys_logo.png" alt="vys logo" className="w-logo mt-1 mb-8" />
-
-      <h2 className="text-2xl font-extrabold text-center mt-4 mb-6">LOGIN</h2>
-
-      <div className="bg-[#3f2d4f] p-6 rounded-2xl shadow-lg w-full max-w-[22rem]">
+    <div className="flex justify-center items-center py-8 px-4 min-h-screen bg-gradient-to-b from-[#4D0002] to-[#00204B]">
+      <div className="sign-in-card-head p-4 rounded-xl shadow-xl w-full max-w-md">     
+        
         <SignIn.Root>
-          {/* Combined email/password step */}
+          {/* Step 1: Enter email */}
           <SignIn.Step name="start">
-            <div className="flex flex-col gap-4">
-              {/* Email Field */}
-              <Clerk.Field name="identifier">
-                <Clerk.Label className="block text-lg font-extrabold mb-2">
-                  username or email:
-                </Clerk.Label>
-                <Clerk.Input
-                  type="text"
-                  className="w-full p-1.5 rounded-xl text-white"
-                  style={{ backgroundColor: "rgba(158, 203, 255, 0.2)" }}
-                />
-                <Clerk.FieldError className="text-sm text-red-400 mt-2" />
-              </Clerk.Field>
-              
-              {/* Password Field */}
-              <Clerk.Field name="password">
-                <Clerk.Label className="block text-lg font-extrabold mb-2">
-                  password:
-                </Clerk.Label>
-                <Clerk.Input
-                  type="password"
-                  className="w-full p-1.5 rounded-xl text-white"
-                  style={{ backgroundColor: "rgba(158, 203, 255, 0.2)" }}
-                />
-                <Clerk.FieldError className="text-sm text-red-400 mt-2" />
-              </Clerk.Field>
-              
-              {/* Sign In Button */}
-              <SignIn.Action 
-                submit
-                className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 rounded-xl mt-2"
-              >
-                Submit
-              </SignIn.Action>
-              
-              {/* OAuth Divider */}
-              <div className="text-center font-extrabold text-md text-gray-300">or</div>
-              
-              {/* Social Login Buttons */}
-              <div className="flex flex-row justify-center gap-2">
-                <Clerk.Connection
-                  name="google"
-                  className="w-[3rem] h-[3rem] bg-white rounded-md flex items-center justify-center"
-                >
-                  <img src="/google-icon.svg" alt="Google" className="w-10 h-10" />
-                </Clerk.Connection>
-                
-                <Clerk.Connection
-                  name="github"
-                  className="w-[3rem] h-[3rem] bg-gray-800 rounded-md flex items-center justify-center"
-                >
-                  <img src="/github-icon.svg" alt="GitHub" className="w-10 h-10 invert" />
-                </Clerk.Connection>
+            {/* 3D Model Canvas */}
+            <div className="w-full max-w-md h-[120px] overflow-hidden mb">
 
-                <Clerk.Connection
-                  name="microsoft"
-                  className="w-[3rem] h-[3rem] bg-gray-800 rounded-md flex items-center justify-center"
-                >
-                  <img src="/microsoft-icon.svg" alt="Microsoft" className="w-10 h-10" />
-                </Clerk.Connection>
-
-                <Clerk.Connection
-                  name="facebook"
-                  className="w-[3rem] h-[3rem] bg-gray-800 rounded-md flex items-center justify-center"
-                >
-                  <img src="/facebook-icon.svg" alt="Facebook" className="w-10 h-10" />
-                </Clerk.Connection>
+              <Canvas>
+                <Suspense fallback={null}>
+                  <Stage environment="city" intensity={0.8}>
+                    <GlassesModel /> {/* scale={1.5} or even 1.2 */}
+                  </Stage>
+                  <OrbitControls enableZoom={false} />
+                </Suspense>
+              </Canvas>
+            </div>
+            <h1 className="text-2xl font-bold text-center text-gray-200 mb-4">LOGIN</h1>
+              <div className="flex flex-col items-center gap-4">
+                <Clerk.Field name="identifier" className="w-full max-w-xs">
+                  <Clerk.Label className="font-Outfit font-extrabold text-gray-200 pl-2 mb-2">Email</Clerk.Label>
+                  <Clerk.Input className="w-full rounded-full text-black bg-blue-200 p-3" />
+                  <Clerk.FieldError className="text-sm text-red-500" />
+                </Clerk.Field>
+                <SignIn.Action submit className="bg-purple-600 hover:bg-purple-700 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200">Continue</SignIn.Action>
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
+                  <div className="text-gray-300">sign in with</div>
+                  <Clerk.Connection
+                    name="google"
+                    className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                  </Clerk.Connection>
+  
+                  <Clerk.Connection
+                    name="microsoft"
+                    className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                  </Clerk.Connection>
+  
+                  <Clerk.Connection
+                    name="facebook"
+                    className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                  </Clerk.Connection>
+                </div>
               </div>
-            </div>
-            
-            {/* Additional Links */}
-            <p className="font-bold text-sm mt-6 text-gray-300 text-center">
-              Don't have an account?{' '}
-              <Link href="/sign-up" className="text-purple-400 font-extrabold">
-                REGISTER
-              </Link>
-            </p>
-            
-            <div className="mt-4 text-center">
-              <SignIn.Action 
-                navigate="forgot-password" 
-                className="text-sm text-purple-400 font-extrabold hover:underline"
-              >
-                Forgot password?
-              </SignIn.Action>
-            </div>
+              <div className="mt-2 text-sm text-center text-gray-400">
+                Don&apos;t have an account?{' '}
+                <Link href="/sign-up" className="text-purple-600 font-outfit font-extrabold hover:underline">
+                  SIGN-UP
+                </Link>
+              </div>
           </SignIn.Step>
 
-          {/* Verification Step */}
+          {/* Step 2: Either email code or password */}
           <SignIn.Step name="verifications">
             <SignIn.Strategy name="email_code">
               <div className="flex flex-col items-center text-gray-200 gap-4">
-                <h2 className="text-xl font-extrabold text-center mb-2">Check your email</h2>
+                <h1 className="font-Outfit font-extrabold text-gray-200 text-xl text-center mb-2">Check your email</h1>
                 <p className="text-center text-sm">We sent a code to <SignIn.SafeIdentifier />.</p>
 
-                <Clerk.Field name="code" className="w-full">
-                  <Clerk.Label className="block text-sm font-extrabold mb-2">Email code:</Clerk.Label>
-                  <Clerk.Input 
-                    className="w-full p-1.5 rounded-xl text-white" 
-                    style={{ backgroundColor: "rgba(158, 203, 255, 0.2)" }}
-                  />
-                  <Clerk.FieldError className="text-xl text-red-400 mt-2" />
+                <Clerk.Field name="code">
+                  <Clerk.Label className="font-Outfit font-extrabold text-gray-200 pl-2 mb-2">Email code:</Clerk.Label>
+                  <Clerk.Input className="w-full rounded-full text-black bg-blue-200 p-3" />
+                  <Clerk.FieldError className="text-sm text-red-500" />
                 </Clerk.Field>
 
-                <SignIn.Action 
-                  submit 
-                  className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 rounded-xl"
-                >
-                  Continue
-                </SignIn.Action>
+                <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200">Continue</SignIn.Action>
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
+                    <div className="text-gray-300">sign in with</div>
+                    <Clerk.Connection
+                      name="google"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+    
+                    <Clerk.Connection
+                      name="microsoft"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+    
+                    <Clerk.Connection
+                      name="facebook"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+                  </div>
+                  <div className="mt-2 text-sm text-center text-gray-400">
+                    Don&apos;t have an account?{' '}
+                    <Link href="/sign-up" className="text-purple-600 font-outfit font-extrabold hover:underline">
+                      SIGN-UP
+                    </Link>
+                  </div>
+              </div>
+            </SignIn.Strategy>
+
+            <SignIn.Strategy name="password">
+              <div className="flex flex-col gap-4">
+                <h1 className="text-2xl font-bold text-center text-gray-200 mb-4">Enter your password</h1>
+
+                <div className="flex flex-col items-center gap-4">
+                <Clerk.Field name="password" className="w-full max-w-xs">
+                  <Clerk.Label className="font-Outfit font-extrabold text-gray-200 pl-2 mb-2">Password</Clerk.Label>
+                  <Clerk.Input className="w-full rounded-full text-black bg-blue-200 p-3" />
+                  <Clerk.FieldError className="text-sm text-red-500" />
+                </Clerk.Field>
+
+                <SignIn.Action submit className="bg-purple-600 hover:bg-purple-700 text-gray-200 font-normal py-1 px-4 mb-6 rounded-full transition duration-200">Sign In</SignIn.Action>
+                <SignIn.Action navigate="forgot-password" className="text-sm text-purple-600 text-center underline">Forgot password?</SignIn.Action>
+                
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
+                    <div className="text-gray-300">sign in with</div>
+                    <Clerk.Connection
+                      name="google"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+    
+                    <Clerk.Connection
+                      name="microsoft"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+    
+                    <Clerk.Connection
+                      name="facebook"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+                  </div>
+                  <div className="mt-2 text-sm text-center text-gray-400">
+                    Don&apos;t have an account?{' '}
+                    <Link href="/sign-up" className="text-purple-600 font-outfit font-extrabold hover:underline">
+                      SIGN-UP
+                    </Link>
+                  </div>
+                
+                </div>
               </div>
             </SignIn.Strategy>
 
             <SignIn.Strategy name="reset_password_email_code">
               <div className="flex flex-col text-gray-200 items-center gap-4">
-                <h2 className="text-xl font-extrabold text-center mb-2">Check your email</h2>
+                <h1 className="text-xl font-bold text-center mb-2">Check your email</h1>
                 <p className="text-center text-sm">We sent a code to <SignIn.SafeIdentifier />.</p>
 
-                <Clerk.Field name="code" className="w-full">
-                  <Clerk.Label className="block text-sm font-extrabold mb-2">Email code:</Clerk.Label>
-                  <Clerk.Input 
-                    className="w-full p-1.5 rounded-xl text-white" 
-                    style={{ backgroundColor: "rgba(158, 203, 255, 0.2)" }}
-                  />
-                  <Clerk.FieldError className="text-xl text-red-400 mt-2" />
+                <Clerk.Field name="code">
+                  <Clerk.Label className="font-Outfit font-extrabold text-gray-200 pl-2 mb-2">Email code:</Clerk.Label>
+                  <Clerk.Input className="w-full rounded-full text-black bg-blue-200 p-3" />
+                  <Clerk.FieldError className="text-sm text-red-500" />
                 </Clerk.Field>
 
-                <SignIn.Action 
-                  submit 
-                  className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 rounded-xl"
-                >
-                  Continue
-                </SignIn.Action>
+                <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200">Continue</SignIn.Action>
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
+                    <div className="text-gray-300">sign in with</div>
+                    <Clerk.Connection
+                      name="google"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+    
+                    <Clerk.Connection
+                      name="microsoft"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+    
+                    <Clerk.Connection
+                      name="facebook"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+                  </div>
+                  <div className="mt-2 text-sm text-center text-gray-400">
+                    Don&apos;t have an account?{' '}
+                    <Link href="/sign-up" className="text-purple-600 font-outfit font-extrabold hover:underline">
+                      SIGN-UP
+                    </Link>
+                  </div>
+              
               </div>
             </SignIn.Strategy>
           </SignIn.Step>
 
-          {/* Forgot Password Step */}
+          {/* Step 3: Forgot password */}
           <SignIn.Step name="forgot-password">
             <div className="flex flex-col text-gray-200 gap-4">
-              <h2 className="text-xl font-extrabold text-center mb-1">Forgot your password?</h2>
-              
-              <div className="text-sm text-center mb-4">
-                Enter your email to receive a password reset link
-              </div>
+              <h1 className="text-xl font-bold text-center mb-1">Forgot your password?</h1>
 
-              <Clerk.Field name="identifier" className="w-full">
-                <Clerk.Label className="block text-sm font-extrabold mb-2">
-                  username or email:
-                </Clerk.Label>
-                <Clerk.Input 
-                  type="text" 
-                  className="w-full p-1.5 rounded-xl text-white"
-                  style={{ backgroundColor: "rgba(158, 203, 255, 0.2)" }}
-                />
-                <Clerk.FieldError className="text-xl text-red-400 mt-2" />
-              </Clerk.Field>
+              <SignIn.SupportedStrategy name="reset_password_email_code">
+                <div className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal w-sm py-1 px-4 rounded-full transition duration-200">
+                  Reset password
+                </div>
+              </SignIn.SupportedStrategy>
 
-              <SignIn.Action 
-                submit 
-                className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 rounded-xl"
-              >
-                Send reset link
+              <SignIn.Action navigate="previous">
+                <div className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200">
+                  Go back
+                </div>
               </SignIn.Action>
-              
-              <SignIn.Action 
-                navigate="previous" 
-                className="text-sm text-purple-400 font-extrabold hover:underline text-center mt-4"
-              >
-                Back to sign in
-              </SignIn.Action>
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
+                    <div className="text-gray-300">sign in with</div>
+                    <Clerk.Connection
+                      name="google"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+    
+                    <Clerk.Connection
+                      name="microsoft"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+    
+                    <Clerk.Connection
+                      name="facebook"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+                  </div>
+                  <div className="mt-2 text-sm text-center text-gray-400">
+                    Don&apos;t have an account?{' '}
+                    <Link href="/sign-up" className="text-purple-600 font-outfit font-extrabold hover:underline">
+                      SIGN-UP
+                    </Link>
+                  </div>
+            
             </div>
           </SignIn.Step>
 
-          {/* Reset Password Step */}
+          {/* Step 4: Reset password */}
           <SignIn.Step name="reset-password">
             <div className="flex flex-col gap-4">
-              <h2 className="text-xl font-extrabold text-center text-gray-200 mb-2">Reset your password</h2>
+              <h1 className="text-xl font-bold text-center text-gray-200 mb-2">Reset your password</h1>
 
-              <Clerk.Field name="password" className="w-full">
-                <Clerk.Label className="block text-sm font-extrabold mb-2">New password:</Clerk.Label>
-                <Clerk.Input 
-                  type="password" 
-                  className="w-full p-1.5 rounded-xl text-white"
-                  style={{ backgroundColor: "rgba(158, 203, 255, 0.2)" }}
-                />
-                <Clerk.FieldError className="text-xl text-red-400 mt-2" />
+              <Clerk.Field name="password">
+                <Clerk.Label className="font-Outfit font-extrabold text-gray-200 pl-2 mb-2">New password</Clerk.Label>
+                  <Clerk.Input className="w-full rounded-full text-black bg-blue-200 p-3" />
+                <Clerk.FieldError className="text-sm text-red-500" />
               </Clerk.Field>
 
-              <Clerk.Field name="confirmPassword" className="w-full">
-                <Clerk.Label className="block text-sm font-extrabold mb-2">Confirm password:</Clerk.Label>
-                <Clerk.Input 
-                  type="password" 
-                  className="w-full p-1.5 rounded-xl text-white"
-                  style={{ backgroundColor: "rgba(158, 203, 255, 0.2)" }}
-                />
-                <Clerk.FieldError className="text-xl text-red-400 mt-2" />
+              <Clerk.Field name="confirmPassword">
+                <Clerk.Label className="font-Outfit font-extrabold text-gray-200 pl-2 mb-2">Confirm password</Clerk.Label>
+                  <Clerk.Input className="w-full rounded-full text-black bg-blue-200 p-3" />
+                <Clerk.FieldError className="text-sm text-red-500" />
               </Clerk.Field>
+                  <div className="flex items-center justify-center font-bold text-xl mt-2">
+                    <div className="text-gray-300">sign in with</div>
+                    <Clerk.Connection
+                      name="google"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+    
+                    <Clerk.Connection
+                      name="microsoft"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+    
+                    <Clerk.Connection
+                      name="facebook"
+                      className="flex text-blue-400 font-medium hover:underline ml-2">
+                        <Clerk.Icon className="w-6 h-6 self-center" />
+                    </Clerk.Connection>
+                  </div>
+                  <div className="mt-2 text-sm text-center text-gray-400">
+                    Don&apos;t have an account?{' '}
+                    <Link href="/sign-up" className="text-purple-600 font-outfit font-extrabold hover:underline">
+                      SIGN-UP
+                    </Link>
+                  </div>
 
-              <SignIn.Action 
-                submit 
-                className="w-full bg-purple-500 hover:bg-purple-600 text-white font-semibold py-2 rounded-xl"
-              >
-                Reset password
-              </SignIn.Action>
+              <SignIn.Action submit className="bg-purple-700 hover:bg-purple-800 text-gray-200 font-normal py-1 px-4 rounded-full transition duration-200 self-center">Reset password</SignIn.Action>
             </div>
           </SignIn.Step>
         </SignIn.Root>
