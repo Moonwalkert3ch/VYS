@@ -1,0 +1,2 @@
+# Ignore generated Prisma runtime
+src/generated/prisma/runtime/wasm-engine-edge.js

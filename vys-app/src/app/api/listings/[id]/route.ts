@@ -2,13 +2,13 @@ import prisma from '@/lib/prisma';
 import { NextResponse } from 'next/server';
 import { auth } from '@clerk/nextjs/server';
 
-type Params = { id: string };
+// type Params = { id: string };
 
 export async function GET(
     req: Request,
-    { params }: { params: Promise<Params> }
+    context: { params: { id: string } }
 ) {
-    const { id } = await params;
+    const { id } = context.params;
     const listing = await prisma.listing.findUnique({
         where: { id: Number(id) },
         include: { images: true },
@@ -21,11 +21,11 @@ export async function GET(
   
 export async function PUT(
     req: Request,
-    { params }: { params: Promise<Params> }
+    context: { params: { id: string } }
 ) {
     const { userId } = await auth();
     if (!userId) return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
-    const { id } = await params;
+    const { id } = context.params;
     const existing = await prisma.listing.findUnique({ where: { id: Number(id) } });
     if (!existing) {
         return NextResponse.json({ error: 'Not Found' }, { status: 404 });
@@ -46,14 +46,14 @@ export async function PUT(
   
 export async function DELETE(
     req: Request,
-    { params }: { params: Promise<Params> }
+    context: { params: { id: string } }
 ) {
     const { userId } = await auth();
     if (!userId) {
         return NextResponse.json({ error: 'Unauthorized' }, { status: 401 });
     }
 
-    const { id } = await params;
+    const { id } = context.params;
     const existing = await prisma.listing.findUnique({ where: { id: Number(id) } });
     if (!existing) {
         return NextResponse.json({ error: 'Not Found' }, { status: 404 });

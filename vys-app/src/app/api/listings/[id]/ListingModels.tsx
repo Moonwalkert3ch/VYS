@@ -1,4 +1,4 @@
-// src/app/listing/[id]/ListingModels.tsx
+// src/api/listing/[id]/ListingModels.tsx
 
 'use client';
 
@@ -27,8 +27,12 @@ export default function ListingModels({ listingId }: { listingId: string }) {
           throw new Error(err.error || res.statusText);
         }
         setModels(await res.json());
-      } catch (err: any) {
-        setError(err.message);
+      } catch (err: unknown) {
+        if (err instanceof Error) {
+          setError(err.message);
+        } else {
+          setError('An unknown error occurred');
+        }
       } finally {
         setLoading(false);
       }
