@@ -3,15 +3,22 @@
     "source": "functions"
   },
   "hosting": {
-    "public": "build", 
-    "ignore": ["firebase.json", "**/.*", "**/node_modules/**"]
+    "source": ".",
+    "ignore": [
+      "firebase.json",
+      "**/.*",
+      "**/node_modules/**"
+    ],
+    "frameworksBackend": {
+      "region": "us-central1"
+    }
   },
   "firestore": {
     "rules": "firestore.rules",
     "indexes": "firestore.indexes.json"
   },
   "dataconnect": {
-    "source": "dataconnect",  
+    "source": "dataconnect",
     "schema": "dataconnect/schema/schema.gql",
     "connector": "dataconnect/connector/connector.yaml"
   }

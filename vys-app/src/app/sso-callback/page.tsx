@@ -14,17 +14,10 @@ export default function SsoCallbackPage() {
 
     // Clerk will have appended something like ?code=…&state=… to the URL             
     signIn
-      .authenticateWithRedirect({ strategy: "oauth_google" })
-      .then((result) => {
-        // Once Clerk returns success, set the session active
-        if (result.status === "complete") {
-          setActive({ session: result.createdSessionId }).then(() => {
-            setStatus("done");
-            router.replace("/dashboard");
-          });
-        } else {
-          setStatus("error");
-        }
+      .authenticateWithRedirect({
+        strategy: "oauth_google",
+        redirectUrl: window.location.href,
+        redirectUrlComplete: "/dashboard"
       })
       .catch(() => {
         setStatus("error");

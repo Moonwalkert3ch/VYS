@@ -7,7 +7,7 @@ import { SignInButton, SignUpButton, UserButton, useUser } from "@clerk/nextjs";
 import { ShoppingCart } from "lucide-react"; 
 import CartPopOut from "@/components/CartPopOut";
 
-export function Header() {
+export default function Header() {
   const { isSignedIn, user } = useUser();
 
   const emailUsername = user?.emailAddresses?.[0]?.emailAddress.split('@')[0];

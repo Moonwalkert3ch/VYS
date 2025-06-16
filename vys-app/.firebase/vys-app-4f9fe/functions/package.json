@@ -1,0 +1,35 @@
+{
+  "name": "vys-app",
+  "version": "0.1.0",
+  "private": true,
+  "dependencies": {
+    "@clerk/elements": "^0.23.31",
+    "@clerk/nextjs": "^6.20.2",
+    "@firebasegen/default-connector": "file:firebasegen-default-connector-1.0.0.tgz",
+    "@radix-ui/react-label": "^2.1.7",
+    "@radix-ui/react-slot": "^1.2.3",
+    "@react-three/drei": "^10.1.2",
+    "@react-three/fiber": "^9.1.2",
+    "@types/three": "^0.177.0",
+    "class-variance-authority": "^0.7.1",
+    "clsx": "^2.1.1",
+    "firebase": "^11.9.1",
+    "firebase-functions": "^6.3.2",
+    "lucide-react": "^0.512.0",
+    "mongoose": "^8.15.1",
+    "next": "15.3.2",
+    "react": "^19.0.0",
+    "react-dom": "^19.0.0",
+    "react-webcam": "^7.2.0",
+    "tailwind-merge": "^3.3.0",
+    "tailwind-scrollbar-hide": "^4.0.0",
+    "tailwindcss-animate": "^1.0.7",
+    "three": "^0.177.0",
+    "firebase-frameworks": "^0.11.0",
+    "firebase-admin": "^11.11.1"
+  },
+  "main": "server.js",
+  "engines": {
+    "node": "20"
+  }
+}
