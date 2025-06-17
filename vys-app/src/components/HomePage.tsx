@@ -1,10 +1,55 @@
 'use client';
 
-import { Search, Plus } from 'lucide-react';
+import Link from 'next/link';
+import Image from 'next/image';
+import { Search, Plus, Heart } from 'lucide-react';
 import { useState } from 'react';
 import { useRouter } from 'next/navigation';
 import BottomNavBar from '@/components/BottomNavBar';
 
+const products = [
+  {
+    id: 1,
+    title: 'Belkin 2-In-1 MagSafe Wireless Charging Dock',
+    price: '$79.99',
+    originalPrice: '$119.99',
+    discount: '15% Off',
+    image: '/images/sample-product.png', // Replace with actual image paths
+  },
+  {
+    id: 5,
+    title: 'Belkin 2-In-1 MagSafe Wireless Charging Dock',
+    price: '$79.99',
+    originalPrice: '$119.99',
+    discount: '15% Off',
+    image: '/images/sample-product.png', // Replace with actual image paths
+  },
+  {
+    id: 6,
+    title: 'Belkin 2-In-1 MagSafe Wireless Charging Dock',
+    price: '$79.99',
+    originalPrice: '$119.99',
+    discount: '15% Off',
+    image: '/images/sample-product.png', // Replace with actual image paths
+  },
+  {
+    id: 7,
+    title: 'Belkin 2-In-1 MagSafe Wireless Charging Dock',
+    price: '$79.99',
+    originalPrice: '$119.99',
+    discount: '15% Off',
+    image: '/images/sample-product.png', // Replace with actual image paths
+  },
+  {
+    id: 8,
+    title: 'Belkin 2-In-1 MagSafe Wireless Charging Dock',
+    price: '$79.99',
+    originalPrice: '$119.99',
+    discount: '15% Off',
+    image: '/images/sample-product.png', // Replace with actual image paths
+  },
+  // Add more products as needed
+];
 
 export default function HomePage() {
   const [isFabOpen, setIsFabOpen] = useState(false);
@@ -15,12 +60,12 @@ export default function HomePage() {
     <>
       <main className="min-h-screen w-full bg-indigo-950 text-[#A1C9FF] flex flex-col p-4 pb-32">
          {/* Page Header */}
-        <header className="w-full max-w-screen-lg mt-4 mb-6">
+        <header className="w-full max-w-screen-lg mt-4 mb-4">
             <h1 className="text-2xl sm:text-3xl font-bold text-center text-[#A1C9FF]">
                 HOME
             </h1>
           </header>
-           <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF] mt-8">
+           <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF]">
                 Search
         </h2>
         {/* Search Bar Row */}
@@ -48,23 +93,105 @@ export default function HomePage() {
           </div>
         </div>
       
-       
+       {/* Listings Section */}
+        <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF] mt-8">
+                Favorites
+        </h2>
+            <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+              {products.map((product) => (
+                <Link
+                  key={product.id}
+                  href={`/product-details`}
+                  className="relative bg-white rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 p-3 text-indigo-950"
+                  style={{
+                    boxShadow: '0 10px 20px rgba(161, 201, 255, 0.4)',
+                  }}
+                >
+                  {/* Product Image */}
+                  <div className="relative w-full h-40 bg-gray-100 rounded-lg overflow-hidden">
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      layout="fill"
+                      objectFit="contain"
+                      className="p-2"
+                    />
+                    {/* Favorite Icon */}
+                    <div className="absolute top-2 right-2 bg-black/60 rounded-full p-1 text-white hover:bg-black/80">
+                      <Heart className="w-4 h-4 inline" />
+                      <span className="ml-1 font-bold text-sm">+</span>
+                    </div>
+                    {/* Discount Badge */}
+                    <div className="absolute bottom-2 left-2 bg-green-400 text-black text-xs font-bold px-2 py-0.5 rounded-md">
+                      {product.discount}
+                    </div>
+                  </div>
+
+                  {/* Product Info */}
+                  <div className="mt-3 space-y-1">
+                    <h3 className="text-sm font-semibold leading-tight">
+                      {product.title}
+                    </h3>
+                    <div className="flex items-center gap-2">
+                      <span className="text-base font-bold">{product.price}</span>
+                      <span className="text-sm line-through text-gray-500">
+                        {product.originalPrice}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
+            </section>
+
 
       {/* Listings Section */}
         <h2 className="text-lg sm:text-xl font-semibold text-[#A1C9FF] mt-8">
                 Listings
         </h2>
-            <section className="grid grid-cols-3 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
-                {/* Placeholder for Listings */}
-                {[1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12].map((listing) => (
-                    <div
-                        key={listing}
-                        className="bg-gray-300 p-4 rounded-md text-indigo-950 hover:bg-[#A1C9FF] hover:text-indigo-950 transition-colors cursor-pointer"
-                    >
-                        <h2 className="text-lg font-semibold">Listing {listing}</h2>
-                        <p className="text-sm mt-2">Description of listing {listing}.</p>
+            <section className="grid grid-cols-2 sm:grid-cols-2 lg:grid-cols-3 gap-6 mt-4">
+              {products.map((product) => (
+                <Link
+                  key={product.id}
+                  href={`/product-details`}
+                  className="relative bg-white rounded-xl shadow-xl hover:scale-105 transition-transform duration-300 p-3 text-indigo-950"
+                  style={{
+                    boxShadow: '0 10px 20px rgba(161, 201, 255, 0.4)',
+                  }}
+                >
+                  {/* Product Image */}
+                  <div className="relative w-full h-40 bg-gray-100 rounded-lg overflow-hidden">
+                    <Image
+                      src={product.image}
+                      alt={product.title}
+                      layout="fill"
+                      objectFit="contain"
+                      className="p-2"
+                    />
+                    {/* Favorite Icon */}
+                    <div className="absolute top-2 right-2 bg-black/60 rounded-full p-1 text-white hover:bg-black/80">
+                      <Heart className="w-4 h-4 inline" />
+                      <span className="ml-1 font-bold text-sm">+</span>
                     </div>
-                ))}
+                    {/* Discount Badge */}
+                    <div className="absolute bottom-2 left-2 bg-green-400 text-black text-xs font-bold px-2 py-0.5 rounded-md">
+                      {product.discount}
+                    </div>
+                  </div>
+
+                  {/* Product Info */}
+                  <div className="mt-3 space-y-1">
+                    <h3 className="text-sm font-semibold leading-tight">
+                      {product.title}
+                    </h3>
+                    <div className="flex items-center gap-2">
+                      <span className="text-base font-bold">{product.price}</span>
+                      <span className="text-sm line-through text-gray-500">
+                        {product.originalPrice}
+                      </span>
+                    </div>
+                  </div>
+                </Link>
+              ))}
             </section>
           </main>
 

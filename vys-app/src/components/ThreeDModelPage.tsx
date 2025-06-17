@@ -1,6 +1,6 @@
 'use client';
 
-import { CheckCircle, XCircle, RotateCw } from 'lucide-react';
+import { CheckCircle, XCircle, Camera, RotateCw } from 'lucide-react';
 import Link from 'next/link';
 import BottomNavBar from '@/components/BottomNavBar';
 
@@ -14,16 +14,10 @@ export default function ThreeDModelPage() {
             </div>
             
             {/* Placeholder for 4 3D Model Uploads in a 2x2 grid */}
-            <div className="grid grid-cols-2 gap-4 w-full max-w-2xl mx-auto">
-            {[1, 2, 3, 4].map((model, index) => (
-                <div
-                key={index}
-                className="bg-gray-300 aspect-square w-full flex items-center justify-center rounded-md hover:bg-[#A1C9FF] hover:text-indigo-950 transition-colors cursor-pointer"
-                >
-                <p className="text-black">3D Model {model}</p>
-                </div>
-            ))}
-            </div>
+             <div className="cursor-pointer bg-white w-full aspect-square max-w-md flex flex-col items-center justify-center rounded-md transition hover:brightness-95">
+            <Camera className="h-10 w-10 text-black mb-2" />
+            <span className="text-black font-medium">Capture Images/Video</span>
+        </div>
 
 
             {/* Action Buttons: Accept, Retry, Cancel */}
@@ -50,9 +44,11 @@ export default function ThreeDModelPage() {
 
                 {/* Cancel */}
                 <div className="flex flex-col items-center">
+                    <Link href="/create-listing">
                 <button className="bg-red-600 hover:bg-[#45132F] p-3 rounded-full">
                     <XCircle className="h-6 w-6 text-[#A1C9FF]" />
                 </button>
+                </Link>
                 <span className="text-sm mt-1">Cancel</span>
                 </div>
             </div>

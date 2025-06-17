@@ -1,0 +1,11 @@
+Model Information:
+* title:	3d Glasses
+* source:	https://sketchfab.com/3d-models/3d-glasses-0eeb672fdcfc454cae92452f611fb541
+* author:	JamalBenjamin (https://sketchfab.com/JamalBenjamin)
+
+Model License:
+* license type:	CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)
+* requirements:	Author must be credited. Commercial use is allowed.
+
+If you use this 3D model in your project be sure to copy paste this credit wherever you share it:
+This work is based on "3d Glasses" (https://sketchfab.com/3d-models/3d-glasses-0eeb672fdcfc454cae92452f611fb541) by JamalBenjamin (https://sketchfab.com/JamalBenjamin) licensed under CC-BY-4.0 (http://creativecommons.org/licenses/by/4.0/)

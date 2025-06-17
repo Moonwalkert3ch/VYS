@@ -15,6 +15,9 @@ export default function EditListingPage() {
   const [isDescriptionFocused, setIsDescriptionFocused] = useState(false);
   const [isAvailable, setIsAvailable] = useState(true);
   const [deliveryMethod, setDeliveryMethod] = useState<'pickup' | 'ship'>('pickup');
+  const additionalImages = Array(5).fill('/placeholder.jpg');
+
+  
 
 
 
@@ -31,17 +34,42 @@ export default function EditListingPage() {
                 </button>
                 <h1 className="text-2xl font-bold text-center w-full">EDIT LISTING</h1>
             </div>
+            <div className="w-full max-w-screen-md space-y-6">
 
-            {/* 3D Model Placeholder */}
-            <Link href="/upload-image" className="block w-full max-w-md">
-                <div className="bg-white w-full aspect-square max-w-md flex items-center justify-center rounded-md mb-6">
-                    <p className='text-bold text-xl text-black text-center'>3d image rendered here</p>
-                </div>
+{/* 3D Model Preview + Scrollable Thumbnails */}
+<div className="w-full max-w-md flex flex-col items-center gap-4 mt-8">
+  {/* 3D Model Placeholder */}
+  <div className="w-full aspect-square bg-white rounded-md flex items-center justify-center text-black font-semibold text-sm">
+    3D Model Placeholder
+  </div>
+
+ {/* Scrollable Additional Images (Swipeable) */}
+    <div className="w-full -mx-4 px-4 overflow-x-auto scrollbar-hide">
+        <div className="flex gap-3 w-max">
+            {/* Plus sign card */}
+            <Link href="/upload-image">
+            <div className="w-20 h-20 flex-shrink-0 bg-white rounded-md flex items-center justify-center text-black text-xl font-bold hover:brightness-90">
+                +
+            </div>
             </Link>
+
+            {/* Image Placeholders */}
+            {additionalImages.map((src, index) => (
+            <div
+                key={index}
+                className="w-20 h-20 flex-shrink-0 bg-white rounded-md flex items-center justify-center text-black text-xs cursor-pointer hover:brightness-90"
+            >
+                Img {index + 1}
+            </div>
+            ))}
+        </div>
+    </div>
+    </div>
+
 
             {/* Delivery Method Options */}
             <div className="w-full max-w-md space-y-2 mb-4">
-                <label className="block font-medium text-sm text-[#A1C9FF]">Delivery Method:</label>
+                <label className="block text-lg sm:text-xl font-bold mt-4 text-[#A1C9FF]">Delivery Method:</label>
                 <div className="flex gap-6">
                 <label className="flex items-center gap-2 cursor-pointer">
                 <input
@@ -67,9 +95,11 @@ export default function EditListingPage() {
                 </label>
             </div>
             </div>
+            
 
             {/* Price + Availability Toggle Row */}
-            <div className="w-full max-w-md space-y-4">
+            <div className="block w-full max-w-md space-y-2 mb-4">
+                <h3 className="text-lg sm:text-xl font-bold mt-4">Price</h3>
                 <div className="flex justify-between items-center w-full">
                     {/* Price Input */}
                     <input
@@ -96,26 +126,32 @@ export default function EditListingPage() {
                 </div>
             </div>
 
-                {/* Item Name with AI Generate */}
-                <div className="flex items-center gap-4 w-full max-w-md mt-4">
+            {/* Item Name with AI Generate */}
+            <div className="w-full max-w-md space-y-2 mb-4">
+                <h3 className="text-lg sm:text-xl font-bold mt-4">Product Name</h3>
+                <div className="flex items-center justify-between gap-4">
                     <input
-                        type="text"
-                        value={itemName}
-                        onChange={(e) => setItemName(e.target.value)}
-                        placeholder="Enter item name"
-                        className="w-48 px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none"
+                    type="text"
+                    value={itemName}
+                    onChange={(e) => setItemName(e.target.value)}
+                    placeholder="Enter item name"
+                    className="flex-1 px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none"
                     />
-                    <button
+                    <Link href="/edit-generate-name">
+                        <button
                         type="button"
-                        className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-1"
-                    >
+                        className="bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-2 whitespace-nowrap"
+                        >
                         <Sparkles className="h-4 w-4" />
                         Generate Name
-                    </button>
+                        </button>
+                    </Link>
                 </div>
+            </div>
 
                 {/* Item Description with AI Generate */}
                 <div className="relative w-full max-w-4xl mt-4">
+                    <h3 className="text-lg sm:text-xl font-bold mt-4 mb-2">Product Description</h3>
                     <textarea
                         value={itemDescription}
                         onChange={(e) => setItemDescription(e.target.value)}
@@ -126,13 +162,15 @@ export default function EditListingPage() {
                         isDescriptionFocused ? 'h-[50vh]' : 'h-28'
                         }`}
                     />
+                    <Link href="/edit-generate-description">
                     <button
                         type="button"
-                        className="absolute top-2 right-2 bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-1 shadow"
+                        className="absolute top-10 right-2 bg-gradient-to-r from-red-500 to-blue-500 text-white text-xs px-3 py-2 rounded-md flex items-center gap-1 shadow"
                     >
                         <Sparkles className="h-4 w-4" />
                         Generate Description
                     </button>
+                    </Link>
                 </div>
 
 
@@ -143,10 +181,12 @@ export default function EditListingPage() {
                             type="submit"
                             className="bg-[#052958] hover:bg-indigo-950 text-[#A1C9FF] outline font-semibold py-2 px-6 rounded-full transition duration-200"
                         >
-                            Save
+                            Submit
                         </button>
                     </Link>
+                    
                 </div>
+            </div>
         </main>
 
         <BottomNavBar />
