@@ -1,10 +1,13 @@
 'use client';
 
+
 import { useState } from 'react';
 import { ArrowLeft, Sparkles } from 'lucide-react';
 import { useRouter } from 'next/navigation';
 import BottomNavBar from '@/components/BottomNavBar';
 import Link from 'next/link';
+
+
 
 
 export default function EditListingPage() {
@@ -17,7 +20,11 @@ export default function EditListingPage() {
   const [deliveryMethod, setDeliveryMethod] = useState<'pickup' | 'ship'>('pickup');
   const additionalImages = Array(5).fill('/placeholder.jpg');
 
-  
+
+ 
+
+
+
 
 
 
@@ -36,12 +43,14 @@ export default function EditListingPage() {
             </div>
             <div className="w-full max-w-screen-md space-y-6">
 
+
 {/* 3D Model Preview + Scrollable Thumbnails */}
 <div className="w-full max-w-md flex flex-col items-center gap-4 mt-8">
   {/* 3D Model Placeholder */}
   <div className="w-full aspect-square bg-white rounded-md flex items-center justify-center text-black font-semibold text-sm">
     3D Model Placeholder
   </div>
+
 
  {/* Scrollable Additional Images (Swipeable) */}
     <div className="w-full -mx-4 px-4 overflow-x-auto scrollbar-hide">
@@ -52,6 +61,7 @@ export default function EditListingPage() {
                 +
             </div>
             </Link>
+
 
             {/* Image Placeholders */}
             {additionalImages.map((src, index) => (
@@ -65,6 +75,8 @@ export default function EditListingPage() {
         </div>
     </div>
     </div>
+
+
 
 
             {/* Delivery Method Options */}
@@ -95,7 +107,8 @@ export default function EditListingPage() {
                 </label>
             </div>
             </div>
-            
+           
+
 
             {/* Price + Availability Toggle Row */}
             <div className="block w-full max-w-md space-y-2 mb-4">
@@ -109,6 +122,7 @@ export default function EditListingPage() {
                     placeholder="Enter price"
                     className="w-36 px-4 py-3 rounded-md text-black placeholder-gray-400 focus:outline-none"
                     />
+
 
                     {/* Toggle Switch */}
                     <div className="flex items-center gap-2">
@@ -125,6 +139,7 @@ export default function EditListingPage() {
                     </div>
                 </div>
             </div>
+
 
             {/* Item Name with AI Generate */}
             <div className="w-full max-w-md space-y-2 mb-4">
@@ -148,6 +163,7 @@ export default function EditListingPage() {
                     </Link>
                 </div>
             </div>
+
 
                 {/* Item Description with AI Generate */}
                 <div className="relative w-full max-w-4xl mt-4">
@@ -174,6 +190,8 @@ export default function EditListingPage() {
                 </div>
 
 
+
+
                 {/* Save Changes Button */}
                 <div className="flex justify-center pt-4">
                     <Link href="/product-listings">
@@ -184,20 +202,13 @@ export default function EditListingPage() {
                             Submit
                         </button>
                     </Link>
-                    
+                   
                 </div>
             </div>
         </main>
+
 
         <BottomNavBar />
     </>
   );
 }
-// Note: This code is a simplified version of the CreateListingPage component, adapted for editing an existing listing.
-// It includes a form for editing the price, item name, and description, with AI generation buttons for the name and description.
-// The 3D model placeholder is represented by a camera icon, and the layout is styled similarly to the original component.
-// The component uses the `useRouter` hook from Next.js for navigation and maintains local state for the form inputs.
-// The `BottomNavBar` component is included at the bottom for navigation purposes.
-// The component is designed to be used in a Next.js application, specifically for editing a listing in a marketplace or similar platform.
-// This code defines an EditListingPage component for a Next.js application.
-// It allows users to edit an existing listing by updating the price, item name, and description.   

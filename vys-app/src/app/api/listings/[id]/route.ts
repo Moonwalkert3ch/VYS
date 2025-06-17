@@ -10,7 +10,8 @@ export async function GET(
 ) {
     const { id } = await params;
     const listing = await prisma.listing.findUnique({
-        where: { id: Number(id) },
+        // where: { id: Number(id) },
+        where: { id },
         include: { images: true },
     });
     if (!listing) {

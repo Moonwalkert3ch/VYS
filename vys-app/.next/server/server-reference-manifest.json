@@ -1,87 +1,167 @@
 {
   "node": {
-    "7f9912868de63e3e07ebc8324a34fad4974549798e": {
+    "7f020c0e0aeaef54c9d0fa6449a0b38987100f9648": {
       "workers": {
         "app/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         },
-        "app/sign-in/[[...sign-in]]/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+        "app/_not-found/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         },
-        "app/sign-up/[[...sign-up]]/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+        "app/create-listing/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/upload-image/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/3d-model/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/listing/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/edit-listing/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
         "app/page": "rsc",
-        "app/sign-in/[[...sign-in]]/page": "rsc",
-        "app/sign-up/[[...sign-up]]/page": "rsc"
+        "app/_not-found/page": "rsc",
+        "app/create-listing/page": "rsc",
+        "app/upload-image/page": "rsc",
+        "app/3d-model/page": "rsc",
+        "app/listing/[id]/page": "rsc",
+        "app/edit-listing/page": "rsc"
       }
     },
-    "7fd85aaa274055da521d19c255524f1ddd4036a0d2": {
+    "7f15977e0ff7f57aeee1c205309f73552ff82df892": {
       "workers": {
         "app/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         },
-        "app/sign-in/[[...sign-in]]/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+        "app/_not-found/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         },
-        "app/sign-up/[[...sign-up]]/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+        "app/create-listing/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/upload-image/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/3d-model/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/listing/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/edit-listing/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
         "app/page": "rsc",
-        "app/sign-in/[[...sign-in]]/page": "rsc",
-        "app/sign-up/[[...sign-up]]/page": "rsc"
+        "app/_not-found/page": "rsc",
+        "app/create-listing/page": "rsc",
+        "app/upload-image/page": "rsc",
+        "app/3d-model/page": "rsc",
+        "app/listing/[id]/page": "rsc",
+        "app/edit-listing/page": "rsc"
       }
     },
-    "7fe472917ac57738cbbfd0248a391ce33a1b2d53a3": {
+    "7f7b260c68c518e801000ebed8e56e924f97f76983": {
       "workers": {
         "app/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         },
-        "app/sign-in/[[...sign-in]]/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+        "app/_not-found/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         },
-        "app/sign-up/[[...sign-up]]/page": {
-          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f9912868de63e3e07ebc8324a34fad4974549798e%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%2C%7B%22id%22%3A%227fd85aaa274055da521d19c255524f1ddd4036a0d2%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227fe472917ac57738cbbfd0248a391ce33a1b2d53a3%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+        "app/create-listing/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/upload-image/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/3d-model/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/listing/[id]/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
+          "async": false
+        },
+        "app/edit-listing/page": {
+          "moduleId": "(rsc)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fkeyless-actions.js%22%2C%5B%7B%22id%22%3A%227f020c0e0aeaef54c9d0fa6449a0b38987100f9648%22%2C%22exportedName%22%3A%22deleteKeylessAction%22%7D%2C%7B%22id%22%3A%227f15977e0ff7f57aeee1c205309f73552ff82df892%22%2C%22exportedName%22%3A%22syncKeylessConfigAction%22%7D%2C%7B%22id%22%3A%227f7b260c68c518e801000ebed8e56e924f97f76983%22%2C%22exportedName%22%3A%22createOrReadKeylessAction%22%7D%5D%5D%5D&__client_imported__=!",
           "async": false
         }
       },
       "layer": {
         "app/page": "rsc",
-        "app/sign-in/[[...sign-in]]/page": "rsc",
-        "app/sign-up/[[...sign-up]]/page": "rsc"
+        "app/_not-found/page": "rsc",
+        "app/create-listing/page": "rsc",
+        "app/upload-image/page": "rsc",
+        "app/3d-model/page": "rsc",
+        "app/listing/[id]/page": "rsc",
+        "app/edit-listing/page": "rsc"
       }
     },
-    "7fc36f530a44ed8d2935cb2796eb7a24a9e201f0ae": {
+    "7f6912427a4f1f644413737ce11be5176c8c932d16": {
       "workers": {
         "app/page": {
-          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227fc36f530a44ed8d2935cb2796eb7a24a9e201f0ae%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227f6912427a4f1f644413737ce11be5176c8c932d16%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
           "async": false
         },
-        "app/sign-in/[[...sign-in]]/page": {
-          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227fc36f530a44ed8d2935cb2796eb7a24a9e201f0ae%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
+        "app/_not-found/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227f6912427a4f1f644413737ce11be5176c8c932d16%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
           "async": false
         },
-        "app/sign-up/[[...sign-up]]/page": {
-          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2Fhome%2Fempty%2FCode%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227fc36f530a44ed8d2935cb2796eb7a24a9e201f0ae%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
+        "app/create-listing/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227f6912427a4f1f644413737ce11be5176c8c932d16%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        },
+        "app/upload-image/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227f6912427a4f1f644413737ce11be5176c8c932d16%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        },
+        "app/3d-model/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227f6912427a4f1f644413737ce11be5176c8c932d16%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        },
+        "app/listing/[id]/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227f6912427a4f1f644413737ce11be5176c8c932d16%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
+          "async": false
+        },
+        "app/edit-listing/page": {
+          "moduleId": "(action-browser)/./node_modules/next/dist/build/webpack/loaders/next-flight-action-entry-loader.js?actions=%5B%5B%22%2FUsers%2Fmeisibley%2FVYS%2FVYS%2Fvys-app%2Fnode_modules%2F%40clerk%2Fnextjs%2Fdist%2Fesm%2Fapp-router%2Fserver-actions.js%22%2C%5B%7B%22id%22%3A%227f6912427a4f1f644413737ce11be5176c8c932d16%22%2C%22exportedName%22%3A%22invalidateCacheAction%22%7D%5D%5D%5D&__client_imported__=true!",
           "async": false
         }
       },
       "layer": {
         "app/page": "action-browser",
-        "app/sign-in/[[...sign-in]]/page": "action-browser",
-        "app/sign-up/[[...sign-up]]/page": "action-browser"
+        "app/_not-found/page": "action-browser",
+        "app/create-listing/page": "action-browser",
+        "app/upload-image/page": "action-browser",
+        "app/3d-model/page": "action-browser",
+        "app/listing/[id]/page": "action-browser",
+        "app/edit-listing/page": "action-browser"
       }
     }
   },

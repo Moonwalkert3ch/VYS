@@ -1,13 +1,13 @@
 import type { Metadata } from "next";
-// import {
-//   ClerkProvider,
-//   SignInButton,
-//   SignUpButton,
-//   SignedIn,
-//   SignedOut,
-//   UserButton,
-// } from '@clerk/nextjs'
-import { ClerkProvider } from "@clerk/nextjs";
+import {
+  ClerkProvider,
+  SignInButton,
+  SignUpButton,
+  SignedIn,
+  SignedOut,
+  UserButton,
+} from '@clerk/nextjs'
+import { ImageProvider } from '@/context/ImageContext';
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
 import { Header } from "@/components/Header";
@@ -39,11 +39,12 @@ export default function RootLayout({
 }>) {
   return (
     <ClerkProvider>
+      <ImageProvider>
       <html lang="en" className={outfit.className}>
         <body
           className={`${geistSans.variable} ${geistMono.variable} antialiased`}
         >
-          {/* <header className="flex justify-end items-center p-4 gap-4 h-16">
+          <header className="flex justify-end items-center p-4 gap-4 h-16">
             <SignedOut>
               <SignInButton />
               <SignUpButton />
@@ -51,11 +52,12 @@ export default function RootLayout({
             <SignedIn>
               <UserButton />
             </SignedIn>
-          </header> */}
-          <Header />
+          </header>
+          {/* <Header /> */}
           {children}
         </body>
       </html>
+      </ImageProvider>
     </ClerkProvider>
   );
 }
