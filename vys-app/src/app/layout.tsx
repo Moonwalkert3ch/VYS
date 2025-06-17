@@ -10,7 +10,7 @@ import type { Metadata } from "next";
 import { ClerkProvider } from "@clerk/nextjs";
 import { Geist, Geist_Mono, Outfit } from "next/font/google";
 import "./globals.css";
-import { Header } from "@/components/Header";
+import Header from "@/components/Header";
 
 const outfit = Outfit({
   variable: "--font-outfit",
