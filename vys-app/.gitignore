@@ -16,6 +16,7 @@ node_modules/
 /coverage
 
 # next.js
+.next
 .next/
 vys-app/.next/
 /.next/
