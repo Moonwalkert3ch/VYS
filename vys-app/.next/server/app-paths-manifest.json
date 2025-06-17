@@ -1,23 +1,7 @@
 {
-  "/_not-found/page": "app/_not-found/page.js",
   "/favicon.ico/route": "app/favicon.ico/route.js",
-  "/billing-summary/page": "app/billing-summary/page.js",
-  "/3d-model/page": "app/3d-model/page.js",
-  "/edit-generate-description/page": "app/edit-generate-description/page.js",
-  "/edit-generate-name/page": "app/edit-generate-name/page.js",
-  "/edit-listing/page": "app/edit-listing/page.js",
-  "/create-listing/page": "app/create-listing/page.js",
-  "/create-generate-description/page": "app/create-generate-description/page.js",
-  "/messages/page": "app/messages/page.js",
-  "/edit-uploads/page": "app/edit-uploads/page.js",
-  "/my-listings/page": "app/my-listings/page.js",
-  "/product-details/page": "app/product-details/page.js",
-  "/notifications/page": "app/notifications/page.js",
+  "/_not-found/page": "app/_not-found/page.js",
   "/page": "app/page.js",
-  "/product-listings/page": "app/product-listings/page.js",
-  "/sign-in/[[...sign-in]]/page": "app/sign-in/[[...sign-in]]/page.js",
-  "/sign-up/[[...sign-up]]/page": "app/sign-up/[[...sign-up]]/page.js",
-  "/sso-callback/page": "app/sso-callback/page.js",
-  "/upload-image/page": "app/upload-image/page.js",
-  "/create-generate-name/page": "app/create-generate-name/page.js"
+  "/billing-summary/page": "app/billing-summary/page.js",
+  "/messages/page": "app/messages/page.js"
 }
