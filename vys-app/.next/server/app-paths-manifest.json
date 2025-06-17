@@ -1,9 +1,0 @@
-{
-  "/_not-found/page": "app/_not-found/page.js",
-  "/3d-model/page": "app/3d-model/page.js",
-  "/upload-image/page": "app/upload-image/page.js",
-  "/page": "app/page.js",
-  "/create-listing/page": "app/create-listing/page.js",
-  "/edit-listing/page": "app/edit-listing/page.js",
-  "/listing/[id]/page": "app/listing/[id]/page.js"
-}
